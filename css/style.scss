@@ -1,0 +1,155 @@
+$color-green1:#00aa4b;
+$color-gray1: #e8e7e7;
+$color-gray2: #777777;
+$color-gray3: #303030;
+$color-gray4: #787878;
+$color-gray5: #f1f1f1;
+$color-gray6:#e2e2e2;
+$color-white1: #ffffff;
+$color-black1: #121212;
+$color-black2: #232323;
+$color-black3: #191919;
+$color-black4: #171717;
+$color-yellow1: #fda11c;
+
+
+
+
+
+$font-family-1: open sans;
+
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
+body {
+    font-family: $font-family-1;
+    color: $color-black1;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+// .header__container {
+//     width: 100%;
+//     position: fixed;
+//     z-index: 100;
+// }
+.header__nav-wrapper {
+    width: 100%;
+    background-color: color-grey5;
+}
+
+.header__nav-container {
+    margin: 0 auto;
+    padding: 15px 30px;
+    min-width: 750px;
+    box-sizing: border-box;
+    border-bottom: solid 1px color-gray6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav-menu-open {
+    width: 73px;
+    height: 73px;
+    background-color: color-yellow1;
+    border-radius: 50%;
+}
+
+.header__nav-menu {
+    display: none;
+}
+
+.header__logo {
+    margin-right: 105px;
+}
+
+.header__logo-img {
+    width: 55px;
+    height: 55px;
+    margin-right: 10px;
+}
+
+.header__search-open {
+    width: 51px;
+    height: 57px;
+}
+
+.header__search-form {
+    display: none;
+}
+
+.header__search-suppliers {
+    display: none;
+}
+
+.header__contacts_mobile {
+    width: 45px;
+    height: 56px;
+}
+
+.header__search-basket {
+    width: 56px;
+    height: 49px;
+}
+
+.search-basket__text {
+    display: none;
+}
+
+.header__category-wtapper {
+    width: 100%;
+    background-color: color-grey5;
+}
+
+.header__category-open {
+    margin: 0 auto;
+    padding: 25px 30px;
+    min-width: 750px;
+    box-sizing: border-box;
+}
+
+.header__category-container {
+    display: none;
+}

@@ -13,56 +13,60 @@
 
 <body>
   <header class="header">
-    <div class="header__container">
-      <div class="header__nav-wrapper">
-        <nav class="header__nav-container">
-          <ul>
-            <li><a href="">Компания</a></li>
-            <li><a href="">Портфолио</a></li>
-            <li><a href="">Проектирование</a></li>
-          </ul>
-          <ul>
-            <li><a href="">Презентация</a></li>
-            <li><a href="">Застройщикам</a></li>
-            <li><a href="">Гос.Заказчикам</a></li>
-            <li><a href="">Таблет-питание</a></li>
-          </ul>
-          <ul>
-            <li><a href="">Сервис</a></li>
-            <li><a href="">Контакты</a></li>
-            <li class="desctop-mail">
-              <div class="desctop-mail__text">info@stolovay.ru</div>
-              <button class="desctop-mail__toltip">Скопировать</button>
-            </li>
-            <li class="desctop-number">
-              <div class="desctop-number__text">8 495 790-72-05</div>
-              <div class="desctop-number__toltip-container">
+    <div class="header__nav-wrapper">
+      <div class="header__nav-container">
+        <button type="button" class="header__nav-menu-open"></button>
+        <div class="header__nav-menu">
+          <nav class="header__nav">
+            <ul>
+              <li><a href="">Компания</a></li>
+              <li><a href="">Портфолио</a></li>
+              <li><a href="">Проектирование</a></li>
+            </ul>
+            <ul>
+              <li><a href="">Презентация</a></li>
+              <li><a href="">Застройщикам</a></li>
+              <li><a href="">Гос.Заказчикам</a></li>
+              <li><a href="">Таблет-питание</a></li>
+            </ul>
+            <ul>
+              <li><a href="">Сервис</a></li>
+              <li><a href="">Контакты</a></li>
+              <li class="desctop-mail">
+                <div class="desctop-mail__text">info@stolovay.ru</div>
+                <button class="desctop-mail__toltip">Скопировать</button>
+              </li>
+              <li class="desctop-number">
+                <div class="desctop-number__text">8 495 790-72-05</div>
+                <div class="desctop-number__toltip-container">
 
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-    <div class="header__search-wrapper">
-      <div class="header__search-container">
-        <a href="" class="header__search-logo">
-          <img alt="logo">
-          <span>Столовая.РУ</span>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- <div class="header__search-wrapper">
+          <div class="header__search-container"> -->
+        <a href="" class="header__logo">
+          <img class="header__logo-img" alt="logo">
+          <span class="header__logo-name">Столовая.РУ</span>
+          <span class="header__logo-text">Создание пищеблоков</span>
         </a>
+        <button type="button" class="header__search-open"></button>
         <form action="" class="header__search-form" method="get">
-          <button type="button" class="header__search-select">Все</button>
+          <!-- <button type="button" class="header__search-select">Все</button> -->
           <div class="header__search-input-container">
             <input type="search" name="Search" id="total-search" class="header__search-input" placeholder=""
               aria-label="Поиск по сайту">
+            <button type="submit" class="header__search-submit"><span>Найти</span></button>
           </div>
-          <button type="submit" class="header__search-submit"><span>Найти</span></button>
         </form>
         <div class="header__search-suppliers">
           <img alt="">
           <a href="">Мы на портале
             поставщиков</a>
         </div>
+        <button type="button" class="header__contacts_mobile"></button>
         <a href="" class="header__search-basket">
           <div class="search-basket__img">
             <span class="search-basket__img-top">12</span>
@@ -72,10 +76,16 @@
             <span class="search-basket__text-bottom">150 000 руб.</span>
           </div>
         </a>
+        <!-- </div>
+        </div> -->
       </div>
     </div>
+
     <div class="header__category-wtapper">
+      <button type="button" class="header__category-open">Оборудование</button>
       <div class="header__category-container">
+        <button type="button" class="header__category-close"></button>
+        <h3>Оборудование</h3>
         <ul class="header__category-list">
           <li class="header__category-item header__category-item_first"><a href="">
               <img alt="">

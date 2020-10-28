@@ -1,0 +1,137 @@
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  font-family: open sans;
+  color: #121212;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header__nav-wrapper {
+  width: 100%;
+  background-color: color-grey5;
+}
+
+.header__nav-container {
+  margin: 0 auto;
+  padding: 15px 30px;
+  min-width: 750px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: solid 1px color-gray6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__nav-menu-open {
+  width: 73px;
+  height: 73px;
+  background-color: color-yellow1;
+  border-radius: 50%;
+}
+
+.header__nav-menu {
+  display: none;
+}
+
+.header__logo {
+  margin-right: 105px;
+}
+
+.header__logo-img {
+  width: 55px;
+  height: 55px;
+  margin-right: 10px;
+}
+
+.header__search-open {
+  width: 51px;
+  height: 57px;
+}
+
+.header__search-form {
+  display: none;
+}
+
+.header__search-suppliers {
+  display: none;
+}
+
+.header__contacts_mobile {
+  width: 45px;
+  height: 56px;
+}
+
+.header__search-basket {
+  width: 56px;
+  height: 49px;
+}
+
+.search-basket__text {
+  display: none;
+}
+
+.header__category-wtapper {
+  width: 100%;
+  background-color: color-grey5;
+}
+
+.header__category-open {
+  margin: 0 auto;
+  padding: 25px 30px;
+  min-width: 750px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header__category-container {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
