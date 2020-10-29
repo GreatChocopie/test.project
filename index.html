@@ -9,13 +9,18 @@
   <link href="">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="font/stylesheet.css" rel="stylesheet">
 </head>
 
 <body>
   <header class="header">
     <div class="header__nav-wrapper">
       <div class="header__nav-container">
-        <button type="button" class="header__nav-menu-open"></button>
+        <button type="button" class="header__nav-menu-open" value="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <div class="header__nav-menu">
           <nav class="header__nav">
             <ul>
@@ -48,11 +53,11 @@
         <!-- <div class="header__search-wrapper">
           <div class="header__search-container"> -->
         <a href="" class="header__logo">
-          <img class="header__logo-img" alt="logo">
-          <span class="header__logo-name">Столовая.РУ</span>
-          <span class="header__logo-text">Создание пищеблоков</span>
+          <img src="img/logo-mob.png" class="header__logo-img" alt="logo" width="254" height="55">
         </a>
-        <button type="button" class="header__search-open"></button>
+        <button type="button" class="header__search-open" value="Открыть поиск">
+          <img src="img/search.png" class="header__search-img" alt="search" width="57" height="51">
+        </button>
         <form action="" class="header__search-form" method="get">
           <!-- <button type="button" class="header__search-select">Все</button> -->
           <div class="header__search-input-container">
@@ -66,10 +71,13 @@
           <a href="">Мы на портале
             поставщиков</a>
         </div>
-        <button type="button" class="header__contacts_mobile"></button>
-        <a href="" class="header__search-basket">
-          <div class="search-basket__img">
-            <span class="search-basket__img-top">12</span>
+        <button type="button" class="header__contacts-mobile" value="Открыть контакты">
+          <img src="img/phone-mob.png" class="header__mobile-img" alt="mobile" width="45" height="51">
+        </button>
+        <a href="" class="header__search-card">
+          <div class="search-card__img-container">
+            <span class="search-card__img-top">12</span>
+            <img src="img/card.png" class="header__card-img" alt="card" width="56" height="51">
           </div>
           <div class="search-basket__text">
             <span class="search-basket__text-top">Сумма</span>
@@ -82,7 +90,9 @@
     </div>
 
     <div class="header__category-wtapper">
-      <button type="button" class="header__category-open">Оборудование</button>
+      <div class="header__category-open-container">
+      <button type="button" class="header__category-open" value="Открыть список с оборудованием">Оборудование</button>
+      </div>
       <div class="header__category-container">
         <button type="button" class="header__category-close"></button>
         <h3>Оборудование</h3>

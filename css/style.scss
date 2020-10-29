@@ -5,18 +5,18 @@ $color-gray3: #303030;
 $color-gray4: #787878;
 $color-gray5: #f1f1f1;
 $color-gray6:#e2e2e2;
+$color-gray7:#353535;
 $color-white1: #ffffff;
 $color-black1: #121212;
 $color-black2: #232323;
 $color-black3: #191919;
 $color-black4: #171717;
+$color-black5: #000000;
 $color-yellow1: #fda11c;
 
 
 
 
-
-$font-family-1: open sans;
 
 
 .visually-hidden:not(:focus):not(:active),
@@ -36,7 +36,7 @@ input[type="radio"].visually-hidden {
 
 
 body {
-    font-family: $font-family-1;
+    font-family: Myriad Pro Regular;
     color: $color-black1;
     font-size: 14px;
     line-height: 20px;
@@ -76,7 +76,7 @@ ul {
 // }
 .header__nav-wrapper {
     width: 100%;
-    background-color: color-grey5;
+    background-color: $color-gray5;
 }
 
 .header__nav-container {
@@ -84,17 +84,30 @@ ul {
     padding: 15px 30px;
     min-width: 750px;
     box-sizing: border-box;
-    border-bottom: solid 1px color-gray6;
+    border-bottom: solid 1px $color-gray6;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
 .header__nav-menu-open {
     width: 73px;
     height: 73px;
-    background-color: color-yellow1;
+    padding: 25px 22px;
+    margin-right: 31px;
+    box-sizing: border-box;
+    background-color: $color-yellow1;
     border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav-menu-open span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $color-white1;
 }
 
 .header__nav-menu {
@@ -103,17 +116,20 @@ ul {
 
 .header__logo {
     margin-right: 105px;
-}
-
-.header__logo-img {
-    width: 55px;
+    width: 254px;
     height: 55px;
-    margin-right: 10px;
 }
 
 .header__search-open {
     width: 51px;
     height: 57px;
+    margin-right: 41px;
+    margin-left: auto;
+}
+
+.header__search-img {
+    width: 57px;
+    height: 51px;
 }
 
 .header__search-form {
@@ -124,14 +140,38 @@ ul {
     display: none;
 }
 
-.header__contacts_mobile {
+.header__contacts-mobile {
     width: 45px;
-    height: 56px;
+    height: 51px;
+    margin-right: 33px;
 }
 
-.header__search-basket {
+.header__mobile-img {
+    width: 45px;
+    height: 51px;
+}
+
+.header__card-img {
     width: 56px;
-    height: 49px;
+    height: 51px;
+}
+
+.search-card__img-container {
+    position: relative;
+    width: 56px;
+    height: 51px;
+}
+
+.search-card__img-top {
+    position: absolute;
+    right: 10px;
+    top: -17px;
+    width: 22px;
+    height: 17px;
+    font-family: MyriadPro-SemiExt;
+    font-size: 25.5px;
+    font-weight: 300;
+    color: $color-yellow1;
 }
 
 .search-basket__text {
@@ -140,14 +180,36 @@ ul {
 
 .header__category-wtapper {
     width: 100%;
-    background-color: color-grey5;
+    background-color: $color-gray5;
+}
+
+.header__category-open-container {
+    margin: 0 auto;
+    min-width: 750px;
+    box-sizing: border-box;
 }
 
 .header__category-open {
-    margin: 0 auto;
+    margin: 0;
     padding: 25px 30px;
-    min-width: 750px;
+    width: 100%;
     box-sizing: border-box;
+    font-family: MyriadPro-LightSemiExt;
+    font-size: 30px;
+    font-weight: 300;
+    color: $color-black5;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__category-open::after {
+    content: '>';
+    width: 14px;
+    height: 17px;
+    font-family: MyriadPro-SemiExt;
+    font-size: 30px;
+    font-weight: 300;
+    color: $color-gray2;
 }
 
 .header__category-container {
