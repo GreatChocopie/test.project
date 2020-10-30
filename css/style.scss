@@ -13,7 +13,8 @@ $color-black3: #191919;
 $color-black4: #171717;
 $color-black5: #000000;
 $color-yellow1: #fda11c;
-$color-pink1: #d5bee7;
+$color-yellow2: #ffaf2d;
+$color-pink1: #d5bee7; 
 
 
 
@@ -130,9 +131,18 @@ ul {
 }
 
 .header__logo {
+    display: none;
+}
+
+.header__logo_mobile {
     width: 254px;
     height: 55px;
     // flex-shrink: 0;
+}
+
+.header__logo-img_mobile {
+    width: 254px;
+    height: 55px;
 }
 
 .header__search-open {
@@ -180,6 +190,8 @@ ul {
     position: relative;
     width: 56px;
     height: 51px;
+    background-image: url(../img/card.png);
+    background-size: 100%;
 }
 
 .search-card__img-top {
@@ -194,7 +206,7 @@ ul {
     color: $color-yellow1;
 }
 
-.search-basket__text {
+.search-card__text {
     display: none;
 }
 
@@ -292,12 +304,12 @@ main {
 
     .header__nav-list:first-child {
         width: 25%;
-        border-right: 1px solid $color-white1;
+        border-right: 1px solid rgba(255, 255, 255, 0.25);
     }
 
     .header__nav-list:nth-child(2) {
         width: 39%;
-        border-right: 1px solid $color-white1;
+        border-right: 1px solid rgba(255, 255, 255, 0.25);
     }
 
     .header__nav-list:last-child {
@@ -315,15 +327,18 @@ main {
         font-weight: normal;
         color: $color-white1;
     }
+
     .desctop-mail__text {
         font-family: Myriad Pro;
         font-size: 16px;
         font-weight: normal;
         color: $color-white1;
     }
+
     .desctop-mail__toltip {
         display: none;
     }
+
     .desctop-number__text {
         font-family: Myriad Pro;
         font-size: 16px;
@@ -354,31 +369,121 @@ main {
         display: none;
     }
 
-    .header__search-form {
-        display: flex;
-    }
-
-    .header__search-suppliers {
-        display: flex;
-    }
-
     .header__contacts-mobile {
         display: none;
     }
 
+    .header__logo_mobile {
+        display: none;
+    }
+
+    .header__logo {
+        display: block;
+        width: 222px;
+        height: 40px;
+        padding: 0 10px;
+        margin-right: 80px;
+    }
+
+    .header__logo-img {
+        width: 222px;
+        height: 40px;
+    }
+
+    .header__search-form {
+        height: 35px;
+        display: flex;
+        max-width: 885px;
+        flex-grow: 1;
+        border-radius: 5px;
+    }
+
+    .header__search-select {
+        display: flex;
+        align-items: center;
+        width: 66px;
+        height: 35px;
+        padding: 12px 26px 12px 17px;
+        box-sizing: border-box;
+        font-family: Myriad Pro;
+        font-size: 16px;
+        color: $color-gray2;
+        background-color: $color-gray5;
+    }
+    .header__search-submit {
+        width: 49px;
+        height: 35px;
+        background-color: $color-yellow2;
+    }
+
+    .header__search-suppliers {
+        display: flex;
+        width: 135px;
+        align-items: center;
+        margin-left: 39px;
+        margin-right: 28px;
+    }
+
+    .header__search-suppliers-img {
+        width: 35px;
+        height: 35px;
+        margin-right: 5px;
+    }
+
+    .header__search-suppliers-link {
+        font-family: MyriadPro-SemiExt;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.14;
+        color: $color-gray2;
+    }
+
     .header__search-card {
         display: flex;
+        padding: 0 10px;
     }
 
-    .search-basket__text {
+    .search-card__img-container {
+        margin-right: 12px;
+        width: 29px;
+        height: 35px;
+        background-image: url(../img/basket-img.png);
+        background-size: 29px 26px;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
+
+    .search-card__img-top {
+        right: 9px;
+        top: -2px;
+        width: 14px;
+        height: 10px;
+        font-family: Myriad Pro;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.14;
+    }
+
+    .search-card__text {
+        margin-top: auto;
         display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
     }
 
+    .search-card__text-top {
+        font-family: MyriadPro-SemiExt;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.14;
+        color: $color-gray2;
+    }
 
-
-
-
-
-
-
+    .search-card__text-bottom {
+        font-family: Myriad Pro;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1.13;
+        color: $color-black4;
+    }
 }
