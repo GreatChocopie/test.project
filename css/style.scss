@@ -40,6 +40,7 @@ input[type="radio"].visually-hidden {
 body {
     font-family: Myriad Pro Regular;
     color: $color-black1;
+    background-color: rgba(232,231,231,0.9);
     font-size: 14px;
     line-height: 20px;
     padding: 0;
@@ -397,6 +398,11 @@ main {
         flex-grow: 1;
         border-radius: 5px;
     }
+    .header__search-input-container {
+        width: 100%;
+        display: flex;
+    
+    }
 
     .header__search-select {
         display: flex;
@@ -409,11 +415,26 @@ main {
         font-size: 16px;
         color: $color-gray2;
         background-color: $color-gray5;
+        border-radius: 5px 0 0 5px;
+    }
+    .header__search-input {
+        padding: 0 10px;
+        box-sizing: border-box;
+        flex-grow: 2;
+        border: none;
+        font-size: 16px;
+    }
+    .header__search-input:focus {
+       outline: none;
     }
     .header__search-submit {
         width: 49px;
         height: 35px;
         background-color: $color-yellow2;
+        border-radius: 0 5px 5px 0;
+    }
+    .header__search-submit span {
+        display: none;
     }
 
     .header__search-suppliers {
@@ -486,4 +507,29 @@ main {
         line-height: 1.13;
         color: $color-black4;
     }
+    .header__category-wtapper {
+        min-width: 1280px;
+        width: 100%;
+        background-color: $color-white1;
+    }
+    .header__category-container {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1563px;
+        box-sizing: border-box;
+    }
+    .header__category-open-container {
+        display: none;
+    }
+    .header__category-title_mobile {
+        display: none;
+    }
+    .header__category-list {
+        padding: 20px 10px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+    }
+    
 }
