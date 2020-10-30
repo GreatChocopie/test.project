@@ -55,6 +55,7 @@ ul {
 }
 
 .header__nav-container {
+  position: relative;
   margin: 0 auto;
   padding: 15px 30px;
   min-width: 670px;
@@ -123,6 +124,93 @@ ul {
 }
 
 .header__nav-menu {
+  display: none;
+}
+
+.header__nav-menu-open_close {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__nav-menu-open_close span:nth-child(2) {
+  display: none;
+}
+
+.header__nav-menu-open_close span:first-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-bottom: -1px;
+}
+
+.header__nav-menu-open_close span:last-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header__nav-menu_open-js {
+  display: block;
+}
+
+.modal-open-js {
+  overflow: hidden;
+}
+
+.header_menu-js {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.header__nav {
+  position: absolute;
+  left: 0;
+  top: 104px;
+  height: 100vh;
+  width: 100%;
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-bottom: 1px solid #e19a32;
+}
+
+.header__nav-list li {
+  padding: 15px 0;
+}
+
+.header__nav-link {
+  font-family: Myriad Pro;
+  font-size: 18px;
+  color: #191919;
+}
+
+.desctop-mail {
+  display: none;
+}
+
+.desctop-number {
   display: none;
 }
 
@@ -275,34 +363,42 @@ main {
     background-color: #00aa4b;
   }
   .header__nav {
+    position: relative;
+    top: 0;
+    left: 0;
     margin: 0 auto;
     padding: 15px 0;
     width: 100%;
+    height: auto;
     max-width: 1563px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    background-color: transparent;
   }
   .header__nav-list {
     margin: 0;
     padding: 4px 5px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    border: none;
   }
   .header__nav-list li {
     padding: 0 5px;
@@ -323,10 +419,15 @@ main {
     border: none;
   }
   .header__nav-link {
-    font-family: Myriad Pro;
     font-size: 16px;
     font-weight: normal;
     color: #ffffff;
+  }
+  .desctop-mail {
+    display: block;
+  }
+  .desctop-number {
+    display: block;
   }
   .desctop-mail__text {
     font-family: Myriad Pro;
