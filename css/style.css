@@ -255,7 +255,7 @@ main {
 
 @media (min-width: 767px) {
   .header__nav-wrapper {
-    min-width: 1280px;
+    min-width: 1340px;
     width: 100%;
     background-color: transparent;
   }
@@ -304,20 +304,23 @@ main {
         -ms-flex-align: center;
             align-items: center;
   }
+  .header__nav-list li {
+    padding: 0 5px;
+  }
   .header__nav-list:first-child {
     width: 25%;
+    padding: 0 20px 0 5px;
     border-right: 1px solid rgba(255, 255, 255, 0.25);
   }
   .header__nav-list:nth-child(2) {
+    padding: 0 20px;
     width: 39%;
     border-right: 1px solid rgba(255, 255, 255, 0.25);
   }
   .header__nav-list:last-child {
+    padding: 0 5px 0 20px;
     width: 36%;
     border: none;
-  }
-  .header__nav-list li {
-    padding: 0 5px;
   }
   .header__nav-link {
     font-family: Myriad Pro;
@@ -515,19 +518,23 @@ main {
     color: #171717;
   }
   .header__category-wtapper {
-    min-width: 1280px;
+    min-width: 1340px;
     width: 100%;
     background-color: #ffffff;
   }
   .header__category-container {
     display: block;
     margin: 0 auto;
+    padding: 0;
     width: 100%;
     max-width: 1563px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
   .header__category-open-container {
+    display: none;
+  }
+  .header__category-close {
     display: none;
   }
   .header__category-title_mobile {
@@ -543,6 +550,29 @@ main {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .header__category-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header__category-img {
+    width: 58px;
+    height: 57px;
+    margin-bottom: 7px;
+  }
+  .header__category-text {
+    font-family: Myriad Pro;
+    font-size: 16px;
+    font-weight: normal;
+    color: #343434;
   }
 }
 /*# sourceMappingURL=style.css.map */

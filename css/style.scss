@@ -12,9 +12,10 @@ $color-black2: #232323;
 $color-black3: #191919;
 $color-black4: #171717;
 $color-black5: #000000;
+$color-black6: #343434;
 $color-yellow1: #fda11c;
 $color-yellow2: #ffaf2d;
-$color-pink1: #d5bee7; 
+$color-pink1: #d5bee7;
 
 
 
@@ -40,7 +41,7 @@ input[type="radio"].visually-hidden {
 body {
     font-family: Myriad Pro Regular;
     color: $color-black1;
-    background-color: rgba(232,231,231,0.9);
+    background-color: rgba(232, 231, 231, 0.9);
     font-size: 14px;
     line-height: 20px;
     padding: 0;
@@ -261,7 +262,7 @@ main {
 @media(min-width: 767px) {
 
     .header__nav-wrapper {
-        min-width: 1280px;
+        min-width: 1340px;
         width: 100%;
         background-color: transparent;
     }
@@ -302,25 +303,29 @@ main {
         justify-content: space-between;
         align-items: center;
     }
+    .header__nav-list li {
+        padding: 0 5px;
+    }
 
     .header__nav-list:first-child {
         width: 25%;
+        padding:  0 20px 0 5px;
         border-right: 1px solid rgba(255, 255, 255, 0.25);
     }
 
     .header__nav-list:nth-child(2) {
+        padding: 0 20px;
         width: 39%;
         border-right: 1px solid rgba(255, 255, 255, 0.25);
     }
 
     .header__nav-list:last-child {
+        padding:  0 5px 0 20px;
         width: 36%;
         border: none;
     }
 
-    .header__nav-list li {
-        padding: 0 5px;
-    }
+    
 
     .header__nav-link {
         font-family: Myriad Pro;
@@ -398,10 +403,11 @@ main {
         flex-grow: 1;
         border-radius: 5px;
     }
+
     .header__search-input-container {
         width: 100%;
         display: flex;
-    
+
     }
 
     .header__search-select {
@@ -417,6 +423,7 @@ main {
         background-color: $color-gray5;
         border-radius: 5px 0 0 5px;
     }
+
     .header__search-input {
         padding: 0 10px;
         box-sizing: border-box;
@@ -424,15 +431,18 @@ main {
         border: none;
         font-size: 16px;
     }
+
     .header__search-input:focus {
-       outline: none;
+        outline: none;
     }
+
     .header__search-submit {
         width: 49px;
         height: 35px;
         background-color: $color-yellow2;
         border-radius: 0 5px 5px 0;
     }
+
     .header__search-submit span {
         display: none;
     }
@@ -507,29 +517,58 @@ main {
         line-height: 1.13;
         color: $color-black4;
     }
+
     .header__category-wtapper {
-        min-width: 1280px;
+        min-width: 1340px;
         width: 100%;
         background-color: $color-white1;
     }
+
     .header__category-container {
         display: block;
         margin: 0 auto;
+        padding: 0;
         width: 100%;
         max-width: 1563px;
         box-sizing: border-box;
     }
+
     .header__category-open-container {
         display: none;
     }
+    .header__category-close {
+        display: none;
+    }
+
     .header__category-title_mobile {
         display: none;
     }
+
     .header__category-list {
         padding: 20px 10px;
         box-sizing: border-box;
         display: flex;
         justify-content: space-between;
     }
-    
+
+    .header__category-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .header__category-img {
+        width: 58px;
+        height: 57px;
+        margin-bottom: 7px;
+    }
+
+    .header__category-text {
+        font-family: Myriad Pro;
+        font-size: 16px;
+        font-weight: normal;
+        color: $color-black6;
+    }
+
 }
