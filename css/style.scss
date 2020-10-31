@@ -441,8 +441,10 @@ main {
     padding: 35px 0;
     background-color: $color-white1;
 }
+
 .main-block__brands-item:nth-child(even) .main-block__brands-link {
-    border-left: 1px solid #e7e6e6;;
+    border-left: 1px solid #e7e6e6;
+    ;
 }
 
 .main-block__brands-link {
@@ -835,6 +837,249 @@ main {
         font-size: 16px;
         font-weight: normal;
         color: $color-black6;
+    }
+
+    .main-block {
+        min-width: 1340px;
+        max-width: 1563px;
+        margin: 0 auto;
+        padding: 15px 10px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-block__offers {
+        margin-right: 20px;
+        width: 304px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $color-white1;
+    }
+
+    .main-block__offers-title {
+        margin: 0;
+        padding: 33px 0 20px 0;
+        font-family: Myriad Pro;
+        font-size: 24px;
+        font-weight: normal;
+        color: $color-yellow2;
+    }
+
+    .main-block__offers-list {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-block__offers-item {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px 0;
+        border-bottom: 1px solid #bababa;
+    }
+    .main-block__offers-item:last-child {
+        border: none;
+    }
+
+    .main-block__offers-link {
+        padding: 0 25px;
+        display: block;
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: MyriadPro-SemiExt;
+        font-size: 16px;
+        font-weight: 300;
+        text-align: left;
+        color: #303030;
+    }
+
+    .main-block__offers-link::after {
+        content: ">";
+        position: absolute;
+        
+        top: 0;
+        right: 15px;
+        color: rgba(48,48,48,0.4);
+        font-family: MyriadPro-SemiExt;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .main-block__slider {
+        height: 476px;
+        background-color: #282828;
+        width: auto;
+        flex-grow: 1;
+    }
+
+    .main-block__sale-wrapper {
+        margin: 0 0 0 21px;
+        padding: 0;
+        min-width: 300px;
+        max-width: 300px;
+        box-sizing: border-box;
+    }
+
+    .main-block__sale {
+        padding: 255px 61px 68px 61px;
+        margin: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        border: 2px solid $color-yellow2;
+        background-color: $color-white1;
+        background-image: url(../img/giftbox.png);
+        background-size: 118px 146px;
+        background-position: top 83px left 61px;
+        background-repeat: no-repeat;
+    }
+
+    .main-block__sale-comment {
+        padding: 0;
+        margin: 0 0 20px 0;
+        font-family: MyriadPro-LightSemiExt;
+        font-size: 25px;
+        line-height: 1.2;
+        color: $color-black3;
+    }
+
+    .main-block__sale-headline {
+        padding: 0;
+        margin: 0 0 50px 0;
+        font-family: Myriad Pro Regular;
+        font-size: 40px;
+        color: $color-black3;
+    }
+
+    .main-block__sale-link {
+        padding: 0 25px 0 0;
+        position: relative;
+        font-family: MyriadPro-SemiExt;
+        font-size: 30px;
+        font-weight: 300;
+        color: $color-yellow2;
+    }
+
+    .main-block__sale a::after {
+        content: '>';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 14px;
+        height: 100%;
+        font-family: MyriadPro-SemiExt;
+        font-size: 30px;
+        font-weight: 300;
+        color: $color-yellow2;
+    }
+
+    .main-block__brands {
+        margin: 0 auto;
+        padding: 15px 30px;
+        min-width: 670px;
+        max-width: 767px;
+        box-sizing: border-box;
+    }
+
+    .main-block__brands-list {
+        width: 100%;
+        margin-bottom: 120px;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+
+    }
+
+    .main-block__brands-item {
+        margin-bottom: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 170px;
+        box-sizing: border-box;
+        padding: 35px 0;
+        background-color: $color-white1;
+    }
+
+    .main-block__brands-item:nth-child(even) .main-block__brands-link {
+        border-left: 1px solid #e7e6e6;
+        ;
+    }
+
+    .main-block__brands-link {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 65px;
+        min-height: 119px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .main-block__brands-link:last-child {
+        font-family: Myriad Pro;
+        font-size: 30px;
+        font-weight: normal;
+        line-height: 2.23;
+        text-align: left;
+        color: #282828;
+    }
+
+    .main-news {
+        display: none;
+    }
+
+    .main-recommendations {
+        margin: 0 auto;
+        padding: 15px 30px;
+        min-width: 670px;
+        max-width: 767px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-recommendations__header {
+        padding: 0 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 76px;
+        box-sizing: border-box;
+    }
+
+    .main-recommendations__header-title {
+        padding: 0;
+        font-family: Myriad Pro;
+        font-size: 50px;
+        font-weight: normal;
+    }
+
+    .main-recommendations__header-text {
+        padding: 0;
+        margin: 0;
+        font-family: MyriadPro-SemiExt;
+        color: $color-gray2;
+        font-size: 30px;
+        font-weight: 300;
+        text-align: center;
+        line-height: normal;
+        text-align: center;
     }
 
 }
