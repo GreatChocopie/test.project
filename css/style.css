@@ -445,6 +445,9 @@ main {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main-block__brands-item {
@@ -462,8 +465,29 @@ main {
   height: 170px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 35px 65px;
+  padding: 35px 0;
   background-color: #ffffff;
+}
+
+.main-block__brands-item:nth-child(even) .main-block__brands-link {
+  border-left: 1px solid #e7e6e6;
+}
+
+.main-block__brands-link {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 65px;
+  min-height: 119px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main-block__brands-link:last-child {

@@ -425,6 +425,7 @@ main {
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
 
 }
@@ -437,8 +438,22 @@ main {
     width: 50%;
     height: 170px;
     box-sizing: border-box;
-    padding: 35px 65px;
+    padding: 35px 0;
     background-color: $color-white1;
+}
+.main-block__brands-item:nth-child(even) .main-block__brands-link {
+    border-left: 1px solid #e7e6e6;;
+}
+
+.main-block__brands-link {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 65px;
+    min-height: 119px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .main-block__brands-link:last-child {
