@@ -426,12 +426,11 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
+    background-color: $color-white1;
 
 }
 
 .main-block__brands-item {
-    margin-bottom: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -440,24 +439,28 @@ ul {
     box-sizing: border-box;
     padding: 35px 0;
     background-color: $color-white1;
+    border-bottom: 1px solid #e7e6e6;
 }
 
 .main-block__brands-item:nth-child(even) .main-block__brands-link {
     border-left: 1px solid #e7e6e6;
-    ;
+
 }
 
 .main-block__brands-link {
     width: 100%;
     box-sizing: border-box;
-    padding: 0 65px;
+    padding: 0;
     min-height: 119px;
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
-
+.main-block__brands-img {
+    width: 225px;
+    height: 55px;
+}
 .main-block__brands-link:last-child {
     font-family: Myriad Pro;
     font-size: 30px;
@@ -918,7 +921,6 @@ ul {
 
     .main-block__slider {
         height: 475px;
-        background-color: #282828;
         width: auto;
         flex-grow: 3;
     }
@@ -928,119 +930,68 @@ ul {
         padding: 0;
         min-width: 300px;
         max-width: 300px;
-        box-sizing: border-box;
     }
 
     .main-block__sale {
         padding: 323px 30px 52px 30px;
-        margin: 0;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        border: 2px solid $color-yellow2;
-        background-color: $color-white1;
-        background-image: url(../img/giftbox.png);
         background-size: 70px 86px;
         background-position: top 219px left 28px;
-        background-repeat: no-repeat;
     }
 
     .main-block__sale-comment {
-        padding: 0;
         margin: 0 0 10px 0;
-        font-family: MyriadPro-LightSemiExt;
         font-size: 18px;
         line-height: 1.2;
-        color: $color-black3;
     }
 
     .main-block__sale-headline {
-        padding: 0;
         margin: 0 0 25px 0;
-        font-family: Myriad Pro Regular;
         font-size: 40px;
-        color: $color-black3;
     }
 
     .main-block__sale-link {
         padding: 0 25px 0 0;
-        position: relative;
-        font-family: MyriadPro-SemiExt;
         font-size: 16px;
         font-weight: 300;
-        color: $color-yellow2;
     }
 
     .main-block__sale a::after {
-        content: '>';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 14px;
-        height: 100%;
-        font-family: MyriadPro-SemiExt;
         font-size: 16px;
-        font-weight: 300;
-        color: $color-yellow2;
     }
 
     .main-block__brands {
-        margin: 0 auto;
-        padding: 15px 30px;
-        min-width: 670px;
-        max-width: 767px;
-        box-sizing: border-box;
+        padding: 0 10px;
+        min-width: 1340px;
+        max-width: 1563px;
     }
     
     .main-block__brands-list {
-        width: 100%;
-        margin-bottom: 120px;
-        padding: 0;
-        box-sizing: border-box;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-
+        margin-bottom: 174px;
+        flex-wrap: nowrap;      
 
     }
 
     .main-block__brands-item {
-        margin-bottom: 2px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 50%;
-        height: 170px;
-        box-sizing: border-box;
-        padding: 35px 0;
-        background-color: $color-white1;
+        width: 257px;
+        height: 101px;
+        padding: 15px 0;
+        border: none;
+       
     }
 
-    .main-block__brands-item:nth-child(even) .main-block__brands-link {
-        border-left: 1px solid #e7e6e6;
-        ;
-    }
 
     .main-block__brands-link {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 0 65px;
-        min-height: 119px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
+        padding: 0;
+        min-height: 71px;
+        border-left: 1px solid #e7e6e6;
+    }
+    .main-block__brands-img {
+        width: 135px;
+        height: 35px;
     }
 
     .main-block__brands-link:last-child {
-        font-family: Myriad Pro;
-        font-size: 30px;
-        font-weight: normal;
-        line-height: 2.23;
-        text-align: left;
-        color: #282828;
+        font-size: 18px;
     }
 
     .main-news {
