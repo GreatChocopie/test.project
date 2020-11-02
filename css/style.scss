@@ -208,7 +208,9 @@ ul {
     display: none;
 }
 
-
+.desctop-number__toltip-wrapper {
+    display: none;
+}
 
 
 
@@ -604,6 +606,7 @@ ul {
         display: block;
         width: 100%;
         background-color: $color-green1;
+        z-index: 10000;
     }
 
     .header__nav {
@@ -628,7 +631,7 @@ ul {
         justify-content: space-around;
         align-items: center;
         border: none;
-       
+
     }
 
 
@@ -761,15 +764,27 @@ ul {
         outline: none;
     }
 
-    // .desctop-mail__number:hover~.desctop-mail__toltip-wrapper {
-    //     display: block;
-    // }
+    .desctop-number__toltip-wrapper {
+        display: none;
+    }
 
-    // .desctop-mail__number:focus~.desctop-mail__toltip-wrapper {
-    //     display: block;
-    // }
+    .desctop-number__toltip {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 754px;
+        height: 354px;
+        background-color: $color-white1;
+        display: flex;
+    }
 
-
+    .desctop-number__toltip_open-js {
+        display: block;
+    }
+    .background-js {
+      background-color: $color-black2;
+      opacity: 50%;
+    }
 
 
 

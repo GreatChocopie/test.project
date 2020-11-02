@@ -214,6 +214,10 @@ ul {
   display: none;
 }
 
+.desctop-number__toltip-wrapper {
+  display: none;
+}
+
 .header__logo {
   display: none;
 }
@@ -656,6 +660,7 @@ ul {
     display: block;
     width: 100%;
     background-color: #00aa4b;
+    z-index: 10000;
   }
   .header__nav {
     position: relative;
@@ -808,6 +813,27 @@ ul {
   .desctop-number__text:focus {
     background-color: rgba(255, 255, 255, 0.2);
     outline: none;
+  }
+  .desctop-number__toltip-wrapper {
+    display: none;
+  }
+  .desctop-number__toltip {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 754px;
+    height: 354px;
+    background-color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .desctop-number__toltip_open-js {
+    display: block;
+  }
+  .background-js {
+    background-color: #232323;
+    opacity: 50%;
   }
   .header__search-wrapper {
     display: block;
