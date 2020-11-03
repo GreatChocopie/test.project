@@ -8,10 +8,12 @@ var background = document.querySelector(".background-js");
 var windowWidth = window.innerWidth;
 
 
-
 if (windowWidth > 767) {
+  const details = document.querySelectorAll("details");
 
-  document.querySelector("details").open = true;
+  for (detail of details) {
+    detail.open = true;
+  }
 }
 
 menuButton.addEventListener("click", function (evt) {
