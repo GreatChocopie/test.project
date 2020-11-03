@@ -85,11 +85,7 @@ summary::marker {
     display: none;
 }
 
-// .header__container {
-//     width: 100%;
-//     position: fixed;
-//     z-index: 100;
-// }
+
 .header__nav-wrapper {
     min-width: 670px;
     width: 100%;
@@ -98,7 +94,6 @@ summary::marker {
 
 .header__nav-container {
     position: relative;
-
     margin: 0 auto;
     padding: 15px 30px;
     min-width: 670px;
@@ -247,16 +242,59 @@ summary::marker {
     height: 57px;
     margin-right: 41px;
     margin-left: auto;
-    // flex-shrink: 0;
 }
 
 .header__search-img {
-    width: 57px;
-    height: 51px;
+    width: 51px;
+    height: 57px;
+}
+
+.header__search-input-container {
+    position: absolute;
+    padding: 0 30px;
+    margin-right: 30px;
+    top: 174px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-white1;
+
+}
+
+.header__search-select {
+    display: none;
+}
+
+.header__search-input {
+    padding: 25px 0;
+    flex-grow: 2;
+    background-color: $color-white1;
+    outline: none;
+    border: none;
+    font-size: 18px;
+}
+
+.header__search-submit {
+    padding: 5px 30px;
+    box-sizing: border-box;
+    color: #4eb369;
+    border: 2px solid #4eb369;
+    border-radius: 35px;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    background: #fff;
 }
 
 .header__search-form {
     display: none;
+}
+
+.header__search-form-open-js {
+    display: block;
 }
 
 .header__search-suppliers {
@@ -265,14 +303,14 @@ summary::marker {
 
 .header__contacts-mobile {
     width: 45px;
-    height: 51px;
+    height: 56px;
     margin-right: 33px;
     flex-shrink: 0;
 }
 
 .header__mobile-img {
     width: 45px;
-    height: 51px;
+    height: 56px;
 }
 
 // .header__search-card {
@@ -1174,11 +1212,14 @@ summary::marker {
         flex-grow: 1;
         border-radius: 5px;
     }
-
+   
     .header__search-input-container {
+        position: static;
+        padding: 0;
         width: 100%;
         display: flex;
-
+        align-items: stretch;
+        background-color: transparent;
     }
 
     .header__search-select {
@@ -1208,10 +1249,12 @@ summary::marker {
     }
 
     .header__search-submit {
+        padding: 0;
         width: 49px;
         height: 35px;
         background: $color-yellow2 url(../img/loop.png) no-repeat center;
         border-radius: 0 5px 5px 0;
+        border: none;
     }
 
     .header__search-submit span {
@@ -1812,7 +1855,7 @@ summary::marker {
     }
 
     .footer__top-nav-item summary::after {
-       display: none;
+        display: none;
     }
 
     .footer__top-nav-item[open]>summary::after {
@@ -1829,6 +1872,7 @@ summary::marker {
     .top-nav-item__list-link {
         font-size: 16px;
     }
+
     .footer__top-nav-item:last-child .top-nav-item__list-item {
         padding: 10px 0;
     }
@@ -1836,6 +1880,7 @@ summary::marker {
     .footer__bottom-wrapper {
         min-width: 1340px;
     }
+
     .footer__bottom-container {
         margin: 0 auto;
         padding: 40px 85px 30px 85px;
