@@ -54,9 +54,9 @@ input[type="radio"].visually-hidden {
 
 
 body {
-    min-width: 670px;
-    max-width: 767px;
-    overflow-x: hidden;
+    // min-width: 670px;
+    // max-width: 767px;
+    // overflow-x: hidden;
     position: relative;
     font-family: Myriad Pro Regular;
     color: $color-black1;
@@ -184,13 +184,14 @@ summary::marker {
 
 .modal-open-js {
     overflow-y: hidden;
+    overflow-x: visible;
 
 }
-// .header-js {
-//     position: fixed;
-//     width: 100%;
-//     height: 100vh;
-// }
+.header-js {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+}
 
 .header__nav {
     position: absolute;
@@ -965,6 +966,10 @@ summary::marker {
 }
 
 @media(min-width: 767px) {
+    body {
+        min-width: 1340px;
+        max-width: 100%;
+    }
     .header {
         width: 100%;
         position: fixed;
