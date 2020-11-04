@@ -23,14 +23,14 @@ $color-pink1: #d5bee7;
     from {
 
         top: 174px;
-        height: 0;
+        // height: 0;
     }
 
     to {
 
 
         top: 105px;
-        height: 100vh;
+        // height: 100vh;
     }
 }
 
@@ -180,7 +180,6 @@ summary::marker {
 // выпадающее меню
 .header__nav-menu_open-js {
     display: block;
-    height: 100%;
 }
 
 .modal-open-js {
@@ -193,6 +192,7 @@ summary::marker {
     top: 0;
     width: 100%;
     height: 100vh;
+    background-color: $color-white1;
 }
 
 .header__nav {
