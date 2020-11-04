@@ -33,6 +33,21 @@ $color-pink1: #d5bee7;
         height: 100%;
     }
 }
+@keyframes zoomMenu-reverse {
+    from {
+
+        top: 105px;
+        height: 100%;
+    }
+
+    to {
+        top: 174px;
+        height: 0;
+
+    }
+}
+
+
 
 
 
@@ -175,11 +190,9 @@ summary::marker {
 }
 
 // выпадающее меню
-.header__nav-menu_open-js {
-    display: block;
-}
 
-.modal-open-js {
+
+.modal-open-js_body {
     overflow-y: hidden;
     overflow-x: visible;
 
@@ -197,8 +210,6 @@ summary::marker {
     background-color: $color-white1;
     display: flex;
     flex-direction: column;
-    animation-name: zoomMenu;
-    animation-duration: 0.5s;
     z-index: 100000;
 }
 
@@ -307,9 +318,9 @@ summary::marker {
     display: none;
 }
 
-.header__search-form-open-js {
-    display: block;
-}
+// .header__search-form-open-js {
+//     display: block;
+// }
 
 .header__search-suppliers {
     display: none;
@@ -395,9 +406,105 @@ summary::marker {
     color: $color-gray2;
 }
 
+
+// выпадающее меню с категориями
+
 .header__category-container {
     display: none;
 }
+
+.modal-open-js {
+    display: block;
+}
+
+
+.header__category {
+    position: fixed;
+    overflow-y: scroll;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $color-white1;
+    display: flex;
+    flex-direction: column;
+    animation-name: zoomCategory;
+    animation-duration: 0.5s;
+    z-index: 100000;
+}
+
+.header__category-list {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header__category-list li {
+    width: 100%;
+    padding: 30px 10px 30px 30px;
+    box-sizing: border-box;
+    border-bottom: solid 1px #e2e2e2;
+}
+
+.header__category-item {
+    position: relative;
+    display: block;
+    width: 100%;
+    font-family: Myriad Pro;
+    font-size: 32px;
+    color: $color-black3;
+    line-height: normal;
+
+}
+.header__category-item::after {
+    content: ">";
+    position: absolute;
+    width: 18px;
+    top: 0;
+    right: 0;
+    color: rgba(48, 48, 48, 0.4);
+    font-family: MyriadPro-SemiExt;
+}
+
+.header__category-img {
+    display: none;
+}
+.header__category-header {
+    min-height: 140px;
+    padding: 30px;
+    box-sizing: border-box;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__category-title_mobile {
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    font-family: Myriad Pro;
+    font-size: 32px;
+    line-height: 1.5;
+    color: #212529;
+}
+.header__category-close {
+    background-color: transparent;
+    outline: none;
+   margin-right: 10px;
+   margin-left: auto;
+   font-family: Myriad Pro;
+    font-size: 32px;
+    line-height: 1.5;
+    color: #212529;
+}
+
+
+
+
+
 
 
 .main {
