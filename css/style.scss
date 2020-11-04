@@ -186,11 +186,11 @@ summary::marker {
     overflow-y: hidden;
 
 }
-.header-js {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-}
+// .header-js {
+//     position: fixed;
+//     width: 100%;
+//     height: 100vh;
+// }
 
 .header__nav {
     position: absolute;
@@ -221,7 +221,7 @@ summary::marker {
 
 .header__nav-link {
     font-family: Myriad Pro;
-    font-size: 18px;
+    font-size: 24px;
     color: $color-black3;
 
 }
