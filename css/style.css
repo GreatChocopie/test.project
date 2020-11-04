@@ -1,4 +1,25 @@
 @charset "UTF-8";
+@-webkit-keyframes zoomMenu {
+  from {
+    top: 174px;
+    height: 0;
+  }
+  to {
+    top: 105px;
+    height: 100vh;
+  }
+}
+@keyframes zoomMenu {
+  from {
+    top: 174px;
+    height: 0;
+  }
+  to {
+    top: 105px;
+    height: 100vh;
+  }
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -193,6 +214,10 @@ summary::marker {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-animation-name: zoomMenu;
+          animation-name: zoomMenu;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
 .header__nav-list {
@@ -364,7 +389,7 @@ summary::marker {
   display: none;
 }
 
-.header__category-wtapper {
+.header__category-wrapper {
   min-width: 670px;
   width: 100%;
   background-color: #f1f1f1;
@@ -1133,6 +1158,8 @@ summary::marker {
         -ms-flex-align: center;
             align-items: center;
     background-color: transparent;
+    -webkit-animation-name: none;
+            animation-name: none;
   }
   .header__nav-list {
     margin: 0;
@@ -1474,10 +1501,13 @@ summary::marker {
     line-height: 1.13;
     color: #171717;
   }
-  .header__category-wtapper {
+  .header__category-wrapper {
     min-width: 1340px;
     width: 100%;
     background-color: #ffffff;
+    -webkit-transition: 0.5s ease-out;
+    transition: 0.5s ease-out;
+    overflow: hidden;
   }
   .header__category-container {
     display: block;

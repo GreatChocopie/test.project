@@ -19,6 +19,20 @@ $color-yellow2: #ffaf2d;
 $color-pink1: #d5bee7;
 
 
+@keyframes zoomMenu {
+    from {
+
+        top: 174px;
+        height: 0;
+    }
+
+    to {
+
+
+        top: 105px;
+        height: 100vh;
+    }
+}
 
 
 
@@ -186,6 +200,8 @@ summary::marker {
     background-color: $color-white1;
     display: flex;
     flex-direction: column;
+    animation-name: zoomMenu;
+    animation-duration: 0.5s;
 }
 
 .header__nav-list {
@@ -345,7 +361,7 @@ summary::marker {
     display: none;
 }
 
-.header__category-wtapper {
+.header__category-wrapper {
     min-width: 670px;
     width: 100%;
     background-color: $color-gray5;
@@ -989,6 +1005,7 @@ summary::marker {
         justify-content: space-between;
         align-items: center;
         background-color: transparent;
+        animation-name: none;
     }
 
     .header__nav-list {
@@ -1212,7 +1229,7 @@ summary::marker {
         flex-grow: 1;
         border-radius: 5px;
     }
-   
+
     .header__search-input-container {
         position: static;
         padding: 0;
@@ -1336,10 +1353,12 @@ summary::marker {
         color: $color-black4;
     }
 
-    .header__category-wtapper {
+    .header__category-wrapper {
         min-width: 1340px;
         width: 100%;
         background-color: $color-white1;
+        transition: 0.5s ease-out;
+        overflow: hidden;
     }
 
     .header__category-container {
