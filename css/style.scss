@@ -54,7 +54,7 @@ input[type="radio"].visually-hidden {
 
 
 body {
-
+    position: relative;
     font-family: Myriad Pro Regular;
     color: $color-black1;
     background-color: rgba(232, 231, 231, 0.9);
@@ -181,13 +181,13 @@ summary::marker {
 
 .modal-open-js {
     overflow-y: hidden;
-    position: fixed;
-    top: 0;
-    height: 100vh;
-    min-width: 670px;
-    max-width: 767px;
-}
 
+}
+.header-js {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
 
 .header__nav {
     position: absolute;
