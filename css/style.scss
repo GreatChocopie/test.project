@@ -23,14 +23,14 @@ $color-pink1: #d5bee7;
     from {
 
         top: 174px;
-        // height: 0;
+        height: 0;
     }
 
     to {
 
 
         top: 105px;
-        // height: 100vh;
+        height: 100%;
     }
 }
 
@@ -54,9 +54,6 @@ input[type="radio"].visually-hidden {
 
 
 body {
-    // min-width: 670px;
-    // max-width: 767px;
-    // overflow-x: hidden;
     position: relative;
     font-family: Myriad Pro Regular;
     color: $color-black1;
@@ -187,10 +184,7 @@ summary::marker {
     overflow-x: visible;
 
 }
-// .header-js {
-//     position: fixed;
-//   height: 100vh;
-// }
+
 
 .header__nav {
     position: fixed;
@@ -954,6 +948,7 @@ summary::marker {
     font-family: MyriadPro-LightSemiExt;
     font-size: 30px;
     color: #777777;
+    line-height: 1.2;
 }
 
 .footer__bottom-developer {

@@ -2,17 +2,21 @@
 @-webkit-keyframes zoomMenu {
   from {
     top: 174px;
+    height: 0;
   }
   to {
     top: 105px;
+    height: 100%;
   }
 }
 @keyframes zoomMenu {
   from {
     top: 174px;
+    height: 0;
   }
   to {
     top: 105px;
+    height: 100%;
   }
 }
 
@@ -1092,6 +1096,7 @@ summary::marker {
   font-family: MyriadPro-LightSemiExt;
   font-size: 30px;
   color: #777777;
+  line-height: 1.2;
 }
 
 .footer__bottom-developer {

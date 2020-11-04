@@ -56,7 +56,6 @@ menuButton.addEventListener("click", function (evt) {
   menuOpen.classList.toggle("header__nav-menu_open-js");
   menuButton.classList.toggle("header__nav-menu-open_close");
   body.classList.toggle("modal-open-js");
-  topMenu.classList.toggle("header-js");
 
 });
 numberButton.addEventListener("click", function (evt) {
