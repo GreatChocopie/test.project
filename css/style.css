@@ -209,6 +209,7 @@ summary::marker {
           animation-name: zoomMenu;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
+  z-index: 100000;
 }
 
 .header__nav-list {
