@@ -188,9 +188,6 @@ summary::marker {
 
 .modal-open-js {
   overflow: hidden;
-}
-
-.header_menu-js {
   position: fixed;
   top: 0;
   height: 100vh;
@@ -214,6 +211,7 @@ summary::marker {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 100;
   -webkit-animation-name: zoomMenu;
           animation-name: zoomMenu;
   -webkit-animation-duration: 0.5s;

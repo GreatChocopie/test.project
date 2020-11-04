@@ -180,14 +180,12 @@ summary::marker {
 
 .modal-open-js {
     overflow: hidden;
-}
-
-.header_menu-js {
     position: fixed;
     top: 0;
     height: 100vh;
     width: 100%;
 }
+
 
 .header__nav {
     position: absolute;
@@ -200,6 +198,7 @@ summary::marker {
     background-color: $color-white1;
     display: flex;
     flex-direction: column;
+    z-index: 100;
     animation-name: zoomMenu;
     animation-duration: 0.5s;
 }
