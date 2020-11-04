@@ -182,11 +182,11 @@ summary::marker {
     display: block;
 }
 
-// .modal-open-js {
-//     overflow-y: hidden;
-//     overflow-x: visible;
+.modal-open-js {
+    overflow-y: hidden;
+    overflow-x: visible;
 
-// }
+}
 .header-js {
     position: fixed;
     top: 0;
@@ -207,7 +207,7 @@ summary::marker {
     background-color: $color-white1;
     display: flex;
     flex-direction: column;
-    z-index: 100;
+    z-index: 1000;
     animation-name: zoomMenu;
     animation-duration: 0.5s;
 }
