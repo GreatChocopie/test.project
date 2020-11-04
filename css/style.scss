@@ -33,6 +33,7 @@ $color-pink1: #d5bee7;
         height: 100%;
     }
 }
+
 @keyframes zoomMenu-reverse {
     from {
 
@@ -459,6 +460,7 @@ summary::marker {
     line-height: normal;
 
 }
+
 .header__category-item::after {
     content: ">";
     position: absolute;
@@ -472,6 +474,7 @@ summary::marker {
 .header__category-img {
     display: none;
 }
+
 .header__category-header {
     min-height: 140px;
     padding: 30px;
@@ -481,6 +484,7 @@ summary::marker {
     justify-content: center;
     align-items: center;
 }
+
 .header__category-title_mobile {
     padding: 0;
     margin: 0;
@@ -490,12 +494,13 @@ summary::marker {
     line-height: 1.5;
     color: #212529;
 }
+
 .header__category-close {
     background-color: transparent;
     outline: none;
-   margin-right: 10px;
-   margin-left: auto;
-   font-family: Myriad Pro;
+    margin-right: 10px;
+    margin-left: auto;
+    font-family: Myriad Pro;
     font-size: 32px;
     line-height: 1.5;
     color: #212529;
@@ -516,10 +521,67 @@ summary::marker {
     display: none;
 }
 
-.main-block__slider {
+.swiper-container {
     height: 556px;
     background-color: #282828;
     width: 100%;
+}
+
+.swiper-wrapper {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.swiper-slide {
+    padding: 62px 35px 40px 35px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.swiper-slide__context {
+    width: 361px;
+}
+
+.context__text-up {
+    padding: 0;
+    margin: 0 0 45px 0;
+    font-family: MyriadPro-LightSemiExt;
+    font-size: 25px;
+    line-height: normal;
+    color: #777777;
+}
+
+.context__title {
+    padding: 0;
+    margin: 0 0 45px 0;
+    font-family: Myriad Pro Regular;
+    font-size: 40px;
+    line-height: normal;
+    color: #f3f1f1;
+}
+
+.context__text {
+    padding: 0;
+    margin: 0 0 35px 0;
+    font-family: MyriadPro-LightSemiExt;
+    font-size: 25px;
+    line-height: normal;
+    color: #f3f1f1;
+}
+
+.context__button {
+    width: 213px;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    border-radius: 26.5px;
+    background-color: #faad3d;
+    color: $color-white1;
+    font-family: Myriad Pro;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 1.33;
 }
 
 .main-block__sale-wrapper {
@@ -1067,7 +1129,7 @@ summary::marker {
 }
 
 @media(min-width: 767px) {
-  
+
     .header {
         width: 100%;
         position: fixed;
@@ -1460,12 +1522,16 @@ summary::marker {
         color: $color-black4;
     }
 
+
+
+
     .header__category-wrapper {
         min-width: 1340px;
         width: 100%;
         background-color: $color-white1;
         transition: 0.5s ease-out;
         overflow: hidden;
+        z-index: 0;
     }
 
     .header__category-container {
@@ -1475,6 +1541,21 @@ summary::marker {
         width: 100%;
         max-width: 1563px;
         box-sizing: border-box;
+    }
+
+    .header__category {
+        position: relative;
+        overflow-y: hidden;
+        height: auto;
+        width: 100%;
+        max-width: 1563px;
+        padding: 0;
+        margin: 0 auto;
+        box-sizing: border-box;
+        background-color: transparent;
+        display: block;
+        animation: none;
+        z-index: 0;
     }
 
     .header__category-open-container {
@@ -1493,17 +1574,31 @@ summary::marker {
         padding: 20px 10px;
         box-sizing: border-box;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
+        align-items: stretch;
+    }
+
+    .header__category-list li {
+        width: auto;
+        padding: 0;
+        border: none;
     }
 
     .header__category-item {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: auto;
 
     }
 
+    .header__category-item::after {
+        display: none;
+    }
+
     .header__category-img {
+        display: block;
         width: 58px;
         height: 57px;
         margin-bottom: 7px;
@@ -1515,6 +1610,12 @@ summary::marker {
         font-weight: normal;
         color: $color-black6;
     }
+
+    .header__category-header {
+        display: none;
+    }
+
+
 
     .main {
         padding-top: 244px;
@@ -1596,7 +1697,7 @@ summary::marker {
         font-family: MyriadPro-SemiExt;
     }
 
-    .main-block__slider {
+    .swiper-container {
         height: 475px;
         width: auto;
         flex-grow: 3;
