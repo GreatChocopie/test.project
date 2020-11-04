@@ -194,6 +194,7 @@ summary::marker {
   width: 100%;
   height: 100vh;
   background-color: #ffffff;
+  z-index: 1000;
 }
 
 .header__nav {
@@ -213,7 +214,6 @@ summary::marker {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  z-index: 1000;
   -webkit-animation-name: zoomMenu;
           animation-name: zoomMenu;
   -webkit-animation-duration: 0.5s;
