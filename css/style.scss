@@ -433,7 +433,7 @@ summary::marker {
     flex-direction: column;
     animation-name: zoomCategory;
     animation-duration: 0.5s;
-    z-index: 100000;
+    z-index: 100;
 }
 
 .header__category-list {
@@ -1133,7 +1133,8 @@ summary::marker {
     .header {
         width: 100%;
         position: fixed;
-        z-index: 9999;
+        z-index: 10;
+       
     }
 
     .header__nav-wrapper {
@@ -1155,9 +1156,11 @@ summary::marker {
     }
 
     .header__nav-menu {
+        position: relative;
         display: block;
         width: 100%;
         background-color: $color-green1;
+        z-index: 1002;
     }
 
     .header__nav {
@@ -1327,6 +1330,7 @@ summary::marker {
         width: 100%;
         height: 100%;
         background-color: rgba(35, 35, 35, 0.5);
+        z-index: 1001;
     }
 
     .background-js-open {
@@ -1350,9 +1354,11 @@ summary::marker {
 
 
     .header__search-wrapper {
+        position: relative;
         display: block;
         width: 100%;
         background-color: $color-gray1;
+        z-index: 1000;
     }
 
     .header__search-container {
@@ -1531,7 +1537,6 @@ summary::marker {
         background-color: $color-white1;
         transition: 0.5s ease-out;
         overflow: hidden;
-        z-index: 0;
     }
 
     .header__category-container {
@@ -1555,7 +1560,8 @@ summary::marker {
         background-color: transparent;
         display: block;
         animation: none;
-        z-index: 0;
+        z-index: 998;
+        
     }
 
     .header__category-open-container {
@@ -1577,6 +1583,8 @@ summary::marker {
         flex-direction: row;
         justify-content: space-between;
         align-items: stretch;
+        z-index: 0;
+        
     }
 
     .header__category-list li {

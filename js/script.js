@@ -32,7 +32,7 @@ window.addEventListener('scroll', function(e) {
     if (currentY > prevY) {
 	// прокрутка вниз
 	// console.log('down');
-	elem.style.margin = "-130px 0 0 0";
+  elem.style.margin = "-130px 0 0 0";
     }
     else {
 	// прокрутка вверх, возвращение назад
