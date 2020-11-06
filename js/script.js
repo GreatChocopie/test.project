@@ -12,6 +12,9 @@ var buttonSearch = document.querySelector(".header__search-open");
 var popapSearch = document.querySelector(".header__search-form");
 var windowWidth = window.innerWidth;
 
+var categoryFirst =topMenu.querySelector(".header__category-item_first");
+var categorySecond =topMenu.querySelector(".header__category-item_second");
+var popapFirst = document.querySelector(".popap__category-first");
 
 
 
@@ -45,14 +48,91 @@ window.addEventListener('scroll', function(e) {
 }
 
 
-// function elemHasParent(elem, needle) {
-//   while (elem != null) {
-//     elem = elem.parentNode;
-//     if (elem == needle)
-//       return true;
-//   }
-//   return false;
-// }
+function openPopapFirst(evt) {
+  if (popapFirst.classList.contains("popap-open-js")) {
+    console.log("already opened map");
+    evt.preventDefault();
+    return false;
+  }
+  console.log("opening map");
+  evt.preventDefault();
+  evt.stopPropagation();
+  popapFirst.classList.add("popap-open-js");
+  body.classList.add("modal-open-js_body");
+  document.addEventListener("click", closePopapFirst);
+};
+
+function openNumberPopap(evt) {
+  if (numberToltip.classList.contains("desctop-number__toltip_open-js")) {
+    console.log("already opened map");
+    evt.preventDefault();
+    return false;
+  }
+  console.log("opening map");
+  evt.preventDefault();
+  evt.stopPropagation();
+  numberToltip.classList.add("desctop-number__toltip_open-js");
+  // body.classList.add("modal-open-js_body");
+  background.classList.add("background-js-open");
+  document.addEventListener("click", closeNumberPopap);
+};
+
+
+
+
+// Ищем среди родителей elem присутствует ли neelde
+function elemHasParent(elem, needle) {
+  while (elem != null) {
+    elem = elem.parentNode;
+    if (elem == needle)
+      return true;
+  }
+  return false;
+}
+
+
+
+function closePopapFirst(evt) {
+  console.log("close start");
+  console.log(evt.target);
+  var target = evt.target;
+  // если это кнопка закрытия или элемент среди родителей которого нет popupMap и
+  // то закрываем
+  if (!elemHasParent(target, popapFirst) || target == closeMap) {
+    console.log("closing map");
+    evt.preventDefault();
+    popapFirst.classList.remove("popap-open-js");
+    body.classList.remove("modal-open-js_body");
+    document.removeEventListener("click", closePopapFirst);
+    console.log("listener removed");
+  } else {
+    console.log("close - wrong elem, do nothing");
+  }
+}
+function closeNumberPopap(evt) {
+  console.log("close start");
+  console.log(evt.target);
+  var target = evt.target;
+  // если это кнопка закрытия или элемент среди родителей которого нет popupMap и
+  // то закрываем
+  if (!elemHasParent(target, numberToltip) || target == numberButton) {
+    console.log("closing map");
+    evt.preventDefault();
+    numberToltip.classList.remove("desctop-number__toltip_open-js");
+    // body.classList.remove("modal-open-js_body");
+    background.classList.remove("background-js-open");
+    numberButton.blur();
+    document.removeEventListener("click", closeNumberPopap);
+    console.log("listener removed");
+  } else {
+    console.log("close - wrong elem, do nothing");
+  }
+}
+
+
+
+
+categoryFirst.addEventListener("click", openPopapFirst);
 
 
 
@@ -79,11 +159,7 @@ categoryClose.addEventListener("click", function (evt) {
   categoryOpen.classList.remove("modal-open-js");
   body.classList.remove("modal-open-js_body");
 });
-numberButton.addEventListener("click", function (evt) {
-  numberToltip.classList.toggle("desctop-number__toltip_open-js");
-  background.classList.toggle("background-js-open")
-});
-
+numberButton.addEventListener("click", openNumberPopap);
 
 
 
