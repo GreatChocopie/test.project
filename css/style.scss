@@ -249,19 +249,39 @@ summary::marker {
 }
 
 .header__logo {
-    display: none;
+    display: flex;
+    align-items: center;
 }
 
-.header__logo_mobile {
-    width: 254px;
+.header__logo-img {
+    width: 55px;
     height: 55px;
-    // flex-shrink: 0;
+    margin-right: 10px;
 }
 
-.header__logo-img_mobile {
-    width: 254px;
-    height: 55px;
+.header__logo-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+.header__logo-name {
+    font-family: Myriad Pro Regular;
+    font-size: 30px;
+    color: #353535;
+    font-weight: normal;
+    line-height: normal;
+}
+
+.header__logo-subname_mobile {
+    font-family: MyriadPro-SemiExt;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: normal;
+    color: #777777;
+}
+
 
 .header__search-open {
     width: 51px;
@@ -269,6 +289,7 @@ summary::marker {
     margin-right: 41px;
     margin-left: auto;
 }
+
 
 .header__search-img {
     width: 51px;
@@ -1206,11 +1227,12 @@ summary::marker {
     font-size: 40px;
     color: $color-white1;
 }
+
 .popap__category-first {
     display: none;
 }
-@media(min-width: 767px) {
 
+@media(min-width: 767px) {
     .header {
         width: 100%;
         position: fixed;
@@ -1293,12 +1315,15 @@ summary::marker {
         flex-grow: 1;
     }
 
-
-
     .header__nav-link {
         font-size: 16px;
         font-weight: normal;
         color: $color-white1;
+    }
+
+    .header__nav-link:hover,
+    .header__nav-link:focus {
+        opacity: 0.8;
     }
 
     .desctop-mail {
@@ -1483,6 +1508,11 @@ summary::marker {
         color: #000000;
     }
 
+    .toltip-text__list-link:hover,
+    .toltip-text__list-link:focus {
+        border-bottom: 1px solid #bababa;
+    }
+
     .toltip-text__list li {
         padding: 5px 0 5px 30px;
     }
@@ -1613,6 +1643,11 @@ summary::marker {
 
     }
 
+    .form__button:hover,
+    .form__button:focus {
+        opacity: 0.8;
+    }
+
     .desctop-number__toltip_open-js {
         display: block;
     }
@@ -1628,7 +1663,8 @@ summary::marker {
 
     .header__search-container {
         margin: 0 auto;
-        padding: 15px 0;
+        padding: 0;
+        min-height: 70px;
         width: 100%;
         max-width: 1563px;
         box-sizing: border-box;
@@ -1650,16 +1686,27 @@ summary::marker {
     }
 
     .header__logo {
-        display: block;
-        width: 222px;
-        height: 40px;
         padding: 0 10px;
-        margin-right: 60px;
+        margin-right: 70px;
     }
 
     .header__logo-img {
-        width: 222px;
+        width: 40px;
         height: 40px;
+    }
+
+    .header__logo-text {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .header__logo-name {
+        font-size: 33px;
+        color: #171717;
+    }
+
+    .header__logo-subname_mobile {
+        display: none;
     }
 
     .header__search-form {
@@ -1691,6 +1738,10 @@ summary::marker {
         color: $color-gray2;
         background-color: $color-gray5;
         border-radius: 5px 0 0 5px;
+        background-image: url(../img/down-arrow.svg);
+        background-repeat: no-repeat;
+        background-position: right 8px top 12px;
+        background-size: 12px 12px;
     }
 
     .header__search-input {
@@ -1714,42 +1765,60 @@ summary::marker {
         border: none;
     }
 
+    .header__search-submit:hover,
+    .header__search-submit:focus {
+        opacity: 0.8;
+    }
+
     .header__search-submit span {
         display: none;
     }
 
     .header__search-suppliers {
+        min-height: 35px;
         display: flex;
         width: 135px;
-        align-items: center;
+        padding-left: 40px;
+        box-sizing: border-box;
+        align-items: flex-end;
         margin-left: 39px;
         margin-right: 28px;
-    }
-
-    .header__search-suppliers-img {
-        width: 35px;
-        height: 35px;
-        margin-right: 5px;
-    }
-
-    .header__search-suppliers-link {
         font-family: MyriadPro-SemiExt;
         font-size: 14px;
         font-weight: 300;
         line-height: 1.14;
         color: $color-gray2;
+        background-image: url(../img/suppliers.png);
+        background-repeat: no-repeat;
+        background-size: 35px 35px;
+        background-position: left 0 top 0;
     }
 
-    // .header__search-suppliers:hover {
 
-    // }
+    .header__search-suppliers:hover,
+    .header__search-suppliers:focus {
+        opacity: 0.8;
+        background-image: url(../img/suppliers-green.png);
+    }
 
     .header__search-card {
+        align-self: stretch;
         display: flex;
-        padding: 0 10px;
+        padding: 15px 10px;
+    }
+
+    .header__search-card:hover,
+    .header__search-card:focus {
+        background-color: $color-yellow1;
+    }
+
+    .header__search-card:hover span,
+    .header__search-card:focus span {
+        color: $color-white1;
     }
 
     .search-card__img-container {
+        align-self: center;
         margin-right: 12px;
         width: 29px;
         height: 35px;
@@ -2128,57 +2197,99 @@ summary::marker {
     }
 
     .main-news {
-        display: none;
-    }
-
-    .main-recommendations {
         margin: 0 auto;
-        padding: 15px 30px;
-        min-width: 670px;
-        max-width: 767px;
+        min-width: 1340px;
+        max-width: 1563px;
+        padding: 15px 77px;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        align-items: center;
     }
 
-    .main-recommendations__header {
-        padding: 0 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 76px;
-        box-sizing: border-box;
-    }
-
-    .main-recommendations__header-title {
+    .main-news__title {
         padding: 0;
-        font-family: Myriad Pro;
-        font-size: 50px;
-        font-weight: normal;
-    }
-
-    .main-recommendations__header-text {
-        padding: 0;
-        margin: 0;
-        font-family: MyriadPro-SemiExt;
-        color: $color-gray2;
-        font-size: 30px;
-        font-weight: 300;
-        text-align: center;
+        margin: 0 0 50px 0;
+        font-family: Myriad Pro Regular;
+        font-size: 40px;
+        color: #121212;
         line-height: normal;
-        text-align: center;
     }
 
-
-
-
-
-
-    .main-news {
-        display: none;
+    .main-news__news-container {
+        display: flex;
+        justify-content: space-between;
     }
 
+    .main-news__new-big {
+        display: flex;
+        flex-direction: column;
+        width: 489px;
+        margin-right: 20px;
+        box-sizing: border-box;
+    }
+
+    .main-news__new-big img {
+        width: 489px;
+        height: 305px;
+        margin-bottom: 28px;
+    }
+
+    .main-news__new-container {
+        width: 820px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .main-news__new {
+        margin-bottom: 40px;
+        display: flex;
+    }
+
+    .main-news__new img {
+        width: 190px;
+        height: 167px;
+        margin-right: 20px;
+    }
+
+    .new__autor-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .new__autor-name {
+        font-family: MyriadPro-LightSemiExt;
+        font-size: 16px;
+        line-height: normal;
+        color: #00aa4b;
+    }
+
+    .new__autor-date {
+        font-family: MyriadPro-LightSemiExt;
+        font-size: 16px;
+        line-height: normal;
+        color: #777777;
+    }
+
+    .new__title {
+        padding: 0;
+        margin: 0 0 25px 0;
+        font-family: Myriad Pro Regular;
+        font-size: 24px;
+        color: #121212;
+        line-height: normal;
+    }
+
+    .new__text {
+        padding: 0;
+        margin: 0 0 10px 0;
+        font-family: MyriadPro-LightSemiExt;
+        font-size: 16px;
+        line-height: normal;
+        color: #121212;
+    }
 
 
     .main-recommendations {
@@ -2473,6 +2584,7 @@ summary::marker {
     }
 
     .footer__bottom-logo {
+        align-items: center;
         display: flex;
         margin: 0;
     }
