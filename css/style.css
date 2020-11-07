@@ -2394,7 +2394,7 @@ summary::marker {
     font-size: 18px;
   }
   .main-news {
-    margin: 0 auto;
+    margin: 0 auto 170px auto;
     min-width: 1340px;
     max-width: 1563px;
     padding: 15px 77px;
@@ -2433,7 +2433,7 @@ summary::marker {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 489px;
-    margin-right: 20px;
+    margin-right: 105px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
@@ -2458,10 +2458,12 @@ summary::marker {
             justify-content: space-between;
   }
   .main-news__new {
+    height: 167px;
     margin-bottom: 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    overflow: hidden;
   }
   .main-news__new img {
     width: 190px;
@@ -2491,7 +2493,7 @@ summary::marker {
   }
   .new__title {
     padding: 0;
-    margin: 0 0 25px 0;
+    margin: 0 0 20px 0;
     font-family: Myriad Pro Regular;
     font-size: 24px;
     color: #121212;
@@ -2504,6 +2506,25 @@ summary::marker {
     font-size: 16px;
     line-height: normal;
     color: #121212;
+    text-overflow: ellipsis;
+  }
+  .main-news__button {
+    padding: 10px 35px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-family: MyriadPro-SemiExt;
+    font-size: 16px;
+    font-weight: 300;
+    color: #121212;
+    line-height: normal;
+    border-radius: 17.5px;
+    border: 2px solid #121212;
+  }
+  .main-news__button:hover, .main-news__button:focus {
+    opacity: 0.8;
   }
   .main-recommendations {
     padding: 0 10px;
