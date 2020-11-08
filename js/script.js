@@ -147,7 +147,7 @@ menuButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   menuOpen.classList.toggle("modal-open-js");
   menuButton.classList.toggle("header__nav-menu-open_close");
-  body.classList.toggle("modal-open-js_body");
+  // body.classList.toggle("modal-open-js_body");
 });
 categoryButton.addEventListener("click", function (evt) {
   evt.preventDefault();
