@@ -223,7 +223,7 @@ summary::marker {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    // flex-shrink: 0;
+   
 }
 
 .header__nav-menu-open span {
@@ -275,6 +275,7 @@ summary::marker {
 
 .header__nav {
     position: fixed;
+    overflow-y: visible;
     left: 0;
     top: 104px;
     height: 100%;
