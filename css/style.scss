@@ -182,6 +182,7 @@ summary::marker {
 }
 
 
+
 .header__nav-wrapper {
     min-width: 732px;
     width: 100%;
@@ -190,7 +191,7 @@ summary::marker {
 
 .header__nav-container {
     position: relative;
-    margin: 0 auto auto auto;
+    margin: 0 auto;
     padding: 15px 30px;
     min-width: 732px;
     max-width: 767px;
@@ -220,7 +221,6 @@ summary::marker {
     background-color: $color-yellow1;
     border-radius: 50%;
     display: flex;
-    -webkit-flex-direction: column;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -236,8 +236,8 @@ summary::marker {
 
 .header__nav-menu {
     display: none;
-    position: absolute;
-    height: 100vh;
+    position: fixed;
+    height: 100%;
     -o-overflow-y: scroll;
     -webkit-overflow-y: scroll;
     -moz-overflow-y: scroll;
@@ -246,8 +246,6 @@ summary::marker {
     left: 0;
     top: 104px;
     background-color: $color-white1;
-    z-index: 100000001;
-
 }
 // .header__nav-menu_animation {
 //     animation-name: zoomMenu;
@@ -302,8 +300,7 @@ summary::marker {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10000001;
-    height: 100%;
+    z-index: 1000000;
 }
 
 
@@ -312,7 +309,7 @@ summary::marker {
     // overflow-y: scroll;
     // left: 0;
     // top: 104px;
-    
+    min-height: fit-content;
     height: 100%;
     width: 100%;
     padding: 30px;
@@ -320,7 +317,7 @@ summary::marker {
     background-color: $color-white1;
     display: flex;
     flex-direction: column;
-    z-index: 100000000;
+    z-index: 1000000;
 }
 
 .header__nav-list {
@@ -1376,6 +1373,7 @@ summary::marker {
     }
 
     .header__nav-menu {
+        overflow: hidden;
         position: relative;
         top: 0;
         left: 0;
