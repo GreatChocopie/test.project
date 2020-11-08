@@ -243,8 +243,9 @@ summary::marker {
     overflow-y: scroll;
     width: 100%;
     left: 0;
-    top: 0;
+    top: 104px;
     background-color: $color-white1;
+
 }
 // .header__nav-menu_animation {
 //     animation-name: zoomMenu;
@@ -299,7 +300,7 @@ summary::marker {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000000;
+    z-index: 10000001;
 }
 
 
@@ -311,12 +312,12 @@ summary::marker {
     min-height: fit-content;
     height: 100%;
     width: 100%;
-    padding: 134px;
+    padding: 30px;
     box-sizing: border-box;
     background-color: $color-white1;
     display: flex;
     flex-direction: column;
-    z-index: 1000000;
+    z-index: 100000000;
 }
 
 .header__nav-list {
