@@ -115,7 +115,7 @@ summary::marker {
 
 .header__nav-container {
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto auto auto;
   padding: 15px 30px;
   min-width: 732px;
   max-width: 767px;
@@ -184,8 +184,8 @@ summary::marker {
 
 .header__nav-menu {
   display: none;
-  position: fixed;
-  height: 100%;
+  position: absolute;
+  height: 100vh;
   -o-overflow-y: scroll;
   -webkit-overflow-y: scroll;
   -moz-overflow-y: scroll;
@@ -194,6 +194,7 @@ summary::marker {
   left: 0;
   top: 104px;
   background-color: #ffffff;
+  z-index: 100000001;
 }
 
 .header__nav-menu-open_close {
@@ -227,12 +228,10 @@ summary::marker {
   top: 0;
   left: 0;
   z-index: 10000001;
+  height: 100%;
 }
 
 .header__nav {
-  min-height: -webkit-fit-content;
-  min-height: -moz-fit-content;
-  min-height: fit-content;
   height: 100%;
   width: 100%;
   padding: 30px;
