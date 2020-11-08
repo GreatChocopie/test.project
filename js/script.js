@@ -78,7 +78,34 @@ function openNumberPopap(evt) {
   document.addEventListener("click", closeNumberPopap);
 };
 
-
+function openSearch(evt) {
+  if (popapSearch.classList.contains("modal-open-js")) {
+    console.log("already opened map");
+    evt.preventDefault();
+    return false;
+  }
+  console.log("opening map");
+  evt.preventDefault();
+  evt.stopPropagation();
+  popapSearch.classList.add("modal-open-js");
+  document.addEventListener("click", closeSearch);
+};
+function openMenu(evt) {
+  if (menuOpen.classList.contains("modal-open-js")) {
+    console.log("already opened map");
+    evt.preventDefault();
+    return false;
+  }
+  console.log("opening map");
+  evt.preventDefault();
+  evt.stopPropagation();
+  menuOpen.classList.add("modal-open-js");
+  menuButton.classList.add("header__nav-menu-open_close");
+  navContainer.classList.add("modal-open-js_nav");
+  body.classList.add("modal-open-js_body");
+  document.addEventListener("click", closeMenu);
+  
+};
 
 
 // Ищем среди родителей elem присутствует ли neelde
@@ -97,8 +124,7 @@ function closePopapFirst(evt) {
   console.log("close start");
   console.log(evt.target);
   var target = evt.target;
-  // если это кнопка закрытия или элемент среди родителей которого нет popupMap и
-  // то закрываем
+
   if (!elemHasParent(target, popapFirst) || target == closeMap) {
     console.log("closing map");
     evt.preventDefault();
@@ -114,8 +140,6 @@ function closeNumberPopap(evt) {
   console.log("close start");
   console.log(evt.target);
   var target = evt.target;
-  // если это кнопка закрытия или элемент среди родителей которого нет popupMap и
-  // то закрываем
   if (!elemHasParent(target, numberToltip) || target == numberButton) {
     console.log("closing map");
     evt.preventDefault();
@@ -130,7 +154,37 @@ function closeNumberPopap(evt) {
   }
 }
 
-
+function closeMenu(evt) {
+  console.log("close start");
+  console.log(evt.target);
+  var target = evt.target;
+  if (!elemHasParent(target, menuOpen) || target == menuButton) {
+    console.log("closing map");
+    evt.preventDefault();
+    menuOpen.classList.remove("modal-open-js");
+  menuButton.classList.remove("header__nav-menu-open_close");
+  navContainer.classList.remove("modal-open-js_nav");
+  body.classList.remove("modal-open-js_body");
+    document.removeEventListener("click", closeMenu);
+    console.log("listener removed");
+  } else {
+    console.log("close - wrong elem, do nothing");
+  }
+}
+function closeSearch(evt) {
+  console.log("close start");
+  console.log(evt.target);
+  var target = evt.target;
+  if (!elemHasParent(target, popapSearch) || target == buttonSearch) {
+    console.log("closing map");
+    evt.preventDefault();
+    popapSearch.classList.remove("modal-open-js");
+    document.removeEventListener("click", closeSearch);
+    console.log("listener removed");
+  } else {
+    console.log("close - wrong elem, do nothing");
+  }
+};
 
 
 categoryFirst.addEventListener("click", openPopapFirst);
@@ -140,17 +194,9 @@ categoryFirst.addEventListener("click", openPopapFirst);
 
 
 
-buttonSearch.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popapSearch.classList.toggle("modal-open-js");
-});
-menuButton.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  menuOpen.classList.toggle("modal-open-js");
-  menuButton.classList.toggle("header__nav-menu-open_close");
-  navContainer.classList.toggle("modal-open-js_nav");
-   body.classList.toggle("modal-open-js_body");
-});
+buttonSearch.addEventListener("click", openSearch);
+menuButton.addEventListener("click", openMenu);
+
 categoryButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   categoryOpen.classList.add("modal-open-js");

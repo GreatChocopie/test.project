@@ -242,7 +242,22 @@ summary::marker {
     top: 104px;
     background-color: $color-white1;
 }
-
+// .header__nav-menu_animation {
+//     animation-name: zoomMenu;
+//     -moz-animation-name: zoomMenu;
+//     -webkit-animation-name: zoomMenu;
+//     -webkit-animation-duration: 0.5s;
+//     -moz-animation-duration: 0.5s;
+//     animation-duration: 0.5s;
+// }
+// .header__nav-menu_animation-reverse {
+//     animation-name: zoomMenu-reverse;
+//     -moz-animation-name: zoomMenu-reverse;
+//     -webkit-animation-name: zoomMenu-reverse;
+//     -webkit-animation-duration: 0.5s;
+//     -moz-animation-duration: 0.5s;
+//     animation-duration: 0.5s;
+// }
 .header__nav-menu-open_close {
     justify-content: center;
 }
