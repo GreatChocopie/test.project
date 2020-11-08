@@ -237,9 +237,6 @@ summary::marker {
     display: none;
     position: fixed;
     height:100%;
-    width: 100%;
-    left: 0;
-    top: 104px;
 }
 
 .header__nav-menu-open_close {
@@ -275,13 +272,19 @@ summary::marker {
     overflow-x: visible;
 
 }
+.modal-open-js_nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000000;
+}
 
 
 .header__nav {
-    // position: fixed;
+    position: fixed;
     overflow-y: scroll;
-    // left: 0;
-    // top: 104px;
+    left: 0;
+    top: 104px;
     height: 100%;
     width: 100%;
     padding: 30px;
@@ -289,7 +292,7 @@ summary::marker {
     background-color: $color-white1;
     display: flex;
     flex-direction: column;
-    z-index: 100000;
+    z-index: 1000000;
 }
 
 .header__nav-list {

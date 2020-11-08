@@ -1,4 +1,5 @@
 var topMenu = document.querySelector(".header");
+var navContainer = topMenu.querySelector(".header__nav-wrapper");
 var menuButton = topMenu.querySelector(".header__nav-menu-open");
 var categoryButton = topMenu.querySelector(".header__category-open");
 var categoryOpen  = topMenu.querySelector(".header__category-container");
@@ -147,7 +148,8 @@ menuButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   menuOpen.classList.toggle("modal-open-js");
   menuButton.classList.toggle("header__nav-menu-open_close");
-  body.classList.toggle("modal-open-js_body");
+  navContainer.classList.toggle("modal-open-js_nav");
+   body.classList.toggle("modal-open-js_body");
 });
 categoryButton.addEventListener("click", function (evt) {
   evt.preventDefault();
