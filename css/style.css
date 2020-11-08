@@ -108,7 +108,7 @@ summary::marker {
 }
 
 .header__nav-wrapper {
-  min-width: 670px;
+  min-width: 732px;
   width: 100%;
   background-color: #f1f1f1;
 }
@@ -117,7 +117,7 @@ summary::marker {
   position: relative;
   margin: 0 auto;
   padding: 15px 30px;
-  min-width: 670px;
+  min-width: 732px;
   max-width: 767px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -430,14 +430,14 @@ summary::marker {
 }
 
 .header__category-wrapper {
-  min-width: 670px;
+  min-width: 732px;
   width: 100%;
   background-color: #f1f1f1;
 }
 
 .header__category-open-container {
   margin: 0 auto;
-  min-width: 670px;
+  min-width: 732px;
   max-width: 767px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -590,7 +590,7 @@ summary::marker {
 }
 
 .main {
-  min-width: 670px;
+  min-width: 732px;
   max-width: 767px;
 }
 
@@ -751,7 +751,7 @@ summary::marker {
 .main-block__sale-wrapper {
   margin: 0 auto;
   padding: 15px 30px;
-  min-width: 670px;
+  min-width: 732px;
   max-width: 767px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -828,7 +828,7 @@ summary::marker {
 .main-block__brands {
   margin: 0 auto;
   padding: 15px 30px;
-  min-width: 670px;
+  min-width: 732px;
   max-width: 767px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -912,7 +912,7 @@ summary::marker {
 .main-recommendations {
   margin: 0 auto;
   padding: 15px 30px;
-  min-width: 670px;
+  min-width: 732px;
   max-width: 767px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1014,6 +1014,8 @@ summary::marker {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
 }
 
 .banner__text-container {
@@ -1021,6 +1023,8 @@ summary::marker {
   width: 331px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
 }
 
 .banner__text-brand {
@@ -1079,7 +1083,7 @@ summary::marker {
 .main-about-us {
   margin: 0 auto;
   padding: 15px 30px;
-  min-width: 670px;
+  min-width: 732px;
   max-width: 767px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1242,7 +1246,7 @@ summary::marker {
 }
 
 .footer__top-wrapper {
-  min-width: 670px;
+  min-width: 732px;
   width: 100%;
   background-color: #282828;
 }
@@ -1250,7 +1254,7 @@ summary::marker {
 .footer__top-container {
   margin: 0 auto;
   padding: 45px;
-  min-width: 670px;
+  min-width: 732px;
   max-width: 767px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1368,7 +1372,7 @@ summary::marker {
 }
 
 .footer__bottom-wrapper {
-  min-width: 670px;
+  min-width: 732px;
   width: 100%;
   background-color: #1f1f1f;
 }
@@ -1376,7 +1380,7 @@ summary::marker {
 .footer__bottom-container {
   margin: 0 auto;
   padding: 40px 45px;
-  min-width: 670px;
+  min-width: 732px;
   max-width: 767px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
