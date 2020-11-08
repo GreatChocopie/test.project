@@ -1,23 +1,62 @@
 $color-green1:#00aa4b;
+$color-green2: #4eb369;
 $color-gray1: #e8e7e7;
 $color-gray2: #777777;
 $color-gray3: #303030;
 $color-gray4: #787878;
 $color-gray5: #f1f1f1;
-$color-gray6:#e2e2e2;
-$color-gray7:#353535;
-$color-gray8:#282828;
+$color-gray6: #e2e2e2;
+$color-gray7: #353535;
+$color-gray8: #282828;
+$color-gray9: #c6c6c6;
+$color-gray10: #bababa;
+$color-gray11: #e8e8e8;
 $color-white1: #ffffff;
+$color-white2: #f3f1f1;
+$color-white3: #e7e6e6;
+$color-white4: #f3f2f2;
 $color-black1: #121212;
 $color-black2: #232323;
 $color-black3: #191919;
 $color-black4: #171717;
 $color-black5: #000000;
 $color-black6: #343434;
+$color-black7: #212529;
+$color-black8: #1f1f1f;
 $color-yellow1: #fda11c;
 $color-yellow2: #ffaf2d;
+$color-yellow3: #e19a32;
+$color-yellow4: #faad3d;
+$color-yellow5: #ff9d0c;
 $color-pink1: #d5bee7;
+@-moz-keyframes zoomMenu {
+    from {
 
+        top: 174px;
+        height: 0;
+    }
+
+    to {
+
+
+        top: 105px;
+        height: 100%;
+    }
+}
+@-webkit-keyframes zoomMenu {
+    from {
+
+        top: 174px;
+        height: 0;
+    }
+
+    to {
+
+
+        top: 105px;
+        height: 100%;
+    }
+}
 
 @keyframes zoomMenu {
     from {
@@ -31,6 +70,32 @@ $color-pink1: #d5bee7;
 
         top: 105px;
         height: 100%;
+    }
+}
+@-moz-keyframes zoomMenu-reverse {
+    from {
+
+        top: 105px;
+        height: 100%;
+    }
+
+    to {
+        top: 174px;
+        height: 0;
+
+    }
+}
+@-webkit-keyframes zoomMenu-reverse {
+    from {
+
+        top: 105px;
+        height: 100%;
+    }
+
+    to {
+        top: 174px;
+        height: 0;
+
     }
 }
 
@@ -75,7 +140,7 @@ body {
     color: $color-black1;
     background-color: rgba(232, 231, 231, 0.9);
     font-size: 14px;
-    line-height: 20px;
+    line-height: normal;
     padding: 0;
     margin: 0;
 }
@@ -218,7 +283,7 @@ summary::marker {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border-bottom: 1px solid #e19a32;
+    border-bottom: 1px solid $color-yellow3;
 }
 
 .header__nav-list li {
@@ -269,7 +334,7 @@ summary::marker {
 .header__logo-name {
     font-family: Myriad Pro Regular;
     font-size: 30px;
-    color: #353535;
+    color: $color-gray7;
     font-weight: normal;
     line-height: normal;
 }
@@ -279,7 +344,7 @@ summary::marker {
     font-size: 18px;
     font-weight: 300;
     line-height: normal;
-    color: #777777;
+    color: $color-gray2;
 }
 
 
@@ -327,22 +392,19 @@ summary::marker {
 .header__search-submit {
     padding: 5px 30px;
     box-sizing: border-box;
-    color: #4eb369;
-    border: 2px solid #4eb369;
+    color: $color-green1;
+    border: 2px solid $color-green1;
     border-radius: 35px;
     font-weight: 400;
     font-size: 18px;
     text-align: center;
-    background: #fff;
+    background: $color-white1;
 }
 
 .header__search-form {
     display: none;
 }
 
-// .header__search-form-open-js {
-//     display: block;
-// }
 
 .header__search-suppliers {
     display: none;
@@ -360,9 +422,6 @@ summary::marker {
     height: 56px;
 }
 
-// .header__search-card {
-//     flex-shrink: 0;
-// }
 .header__card-img {
     width: 56px;
     height: 51px;
@@ -453,6 +512,10 @@ summary::marker {
     display: flex;
     flex-direction: column;
     animation-name: zoomCategory;
+    -moz-animation-name: zoomCategory;
+    -webkit-animation-name: zoomCategory;
+    -webkit-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
     animation-duration: 0.5s;
     z-index: 100;
 }
@@ -468,7 +531,7 @@ summary::marker {
     width: 100%;
     padding: 30px 10px 30px 30px;
     box-sizing: border-box;
-    border-bottom: solid 1px #e2e2e2;
+    border-bottom: solid 1px $color-gray6;
 }
 
 .header__category-item {
@@ -500,7 +563,7 @@ summary::marker {
     min-height: 140px;
     padding: 30px;
     box-sizing: border-box;
-    background: #f1f1f1;
+    background: $color-gray5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -513,7 +576,7 @@ summary::marker {
     font-family: Myriad Pro;
     font-size: 32px;
     line-height: 1.5;
-    color: #212529;
+    color: $color-black7;
 }
 
 .header__category-close {
@@ -524,10 +587,8 @@ summary::marker {
     font-family: Myriad Pro;
     font-size: 32px;
     line-height: 1.5;
-    color: #212529;
+    color: $color-black7;
 }
-
-
 
 
 
@@ -544,7 +605,7 @@ summary::marker {
 
 .swiper-container {
     min-height: 556px;
-    background-color: #282828;
+    background-color: $color-gray8;
     width: 100%;
 }
 
@@ -642,7 +703,7 @@ summary::marker {
     font-family: MyriadPro-LightSemiExt;
     font-size: 25px;
     line-height: normal;
-    color: #777777;
+    color: $color-gray2;
 }
 
 .context__title {
@@ -651,7 +712,7 @@ summary::marker {
     font-family: Myriad Pro Regular;
     font-size: 40px;
     line-height: normal;
-    color: #f3f1f1;
+    color: $color-white2;
 }
 
 .context__text {
@@ -660,7 +721,7 @@ summary::marker {
     font-family: MyriadPro-LightSemiExt;
     font-size: 25px;
     line-height: normal;
-    color: #f3f1f1;
+    color: $color-white2;
 }
 
 .context__button {
@@ -669,7 +730,7 @@ summary::marker {
     padding: 15px 30px;
     box-sizing: border-box;
     border-radius: 26.5px;
-    background-color: #faad3d;
+    background-color: $color-yellow4;
     color: $color-white1;
     font-family: Myriad Pro;
     font-size: 30px;
@@ -776,11 +837,11 @@ summary::marker {
     box-sizing: border-box;
     padding: 35px 0;
     background-color: $color-white1;
-    border-bottom: 1px solid #e7e6e6;
+    border-bottom: 1px solid $color-white3;
 }
 
 .main-block__brands-item:nth-child(even) .main-block__brands-link {
-    border-left: 1px solid #e7e6e6;
+    border-left: 1px solid $color-white3;
 
 }
 
@@ -806,7 +867,7 @@ summary::marker {
     font-weight: normal;
     line-height: 2.23;
     text-align: left;
-    color: #282828;
+    color: $color-gray8;
 }
 
 .main-news {
@@ -840,7 +901,7 @@ summary::marker {
     font-family: Myriad Pro;
     font-size: 50px;
     font-weight: normal;
-    color: #232323;
+    color: $color-black2;
 }
 
 .main-recommendations__header-text {
@@ -874,6 +935,17 @@ summary::marker {
     display: flex;
     justify-content: space-between;
     background-color: $color-white1;
+}
+
+.banner__img {
+    width: 235px;
+    height: auto;
+}
+
+.banner__img-container {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
 }
 
 .banner__text-container {
@@ -971,7 +1043,7 @@ summary::marker {
 .info-logo_name {
     font-family: Myriad Pro Regular;
     font-size: 50px;
-    color: #191919;
+    color: $color-black3;
     font-weight: normal;
     line-height: normal;
 }
@@ -979,7 +1051,7 @@ summary::marker {
 .info-logo_subname {
     font-family: MyriadPro-LightSemiExt;
     font-size: 25px;
-    color: #777777;
+    color: $color-gray2;
     line-height: normal;
 }
 
@@ -990,7 +1062,7 @@ summary::marker {
 .main-about-us__info-text span {
     font-family: MyriadPro-LightSemiExt;
     font-size: 30px;
-    color: #777777;
+    color: $color-gray2;
     margin-bottom: 50px;
     font-weight: normal;
     line-height: normal;
@@ -1003,7 +1075,7 @@ summary::marker {
     margin: 0;
     font-family: Myriad Pro Regular;
     font-size: 40px;
-    color: #191919;
+    color: $color-black3;
     font-weight: normal;
     line-height: normal;
 }
@@ -1012,7 +1084,7 @@ summary::marker {
     padding: 0;
     margin: 0;
     font-family: MyriadPro-LightSemiExt;
-    color: #000000;
+    color: $color-black5;
     font-size: 30px;
     line-height: normal;
 }
@@ -1028,7 +1100,7 @@ summary::marker {
     margin-bottom: 50px;
     font-family: Myriad Pro Regular;
     font-size: 50px;
-    color: #191919;
+    color: $color-black3;
     font-weight: normal;
     line-height: normal;
 }
@@ -1037,7 +1109,7 @@ summary::marker {
     padding: 0;
     margin: 0;
     font-family: MyriadPro-LightSemiExt;
-    color: #191919;
+    color: $color-black3;
     font-size: 30px;
     line-height: normal;
 }
@@ -1052,7 +1124,7 @@ summary::marker {
     width: 100px;
     height: 100px;
     margin-top: 60px;
-    background-color: #282828;
+    background-color: $color-gray8;
     border-radius: 50%;
 }
 
@@ -1075,7 +1147,7 @@ summary::marker {
 .footer__top-wrapper {
     min-width: 670px;
     width: 100%;
-    background-color: #282828;
+    background-color: $color-gray8;
 }
 
 .footer__top-container {
@@ -1096,7 +1168,7 @@ summary::marker {
 .footer__top-nav-item {
     width: 100%;
     box-sizing: border-box;
-    border-bottom: 1px solid #f3f2f2;
+    border-bottom: 1px solid $color-white4;
 }
 
 .footer__top-nav-item summary {
@@ -1177,8 +1249,7 @@ summary::marker {
 .footer__bottom-wrapper {
     min-width: 670px;
     width: 100%;
-    background-color:
-        #1f1f1f;
+    background-color: $color-black8;
 }
 
 .footer__bottom-container {
@@ -1216,7 +1287,7 @@ summary::marker {
 .footer__bottom-logo-subname {
     font-family: MyriadPro-LightSemiExt;
     font-size: 30px;
-    color: #777777;
+    color: $color-gray2;
     line-height: 1.2;
 }
 
@@ -1280,6 +1351,8 @@ summary::marker {
         justify-content: space-between;
         align-items: center;
         background-color: transparent;
+        -webkit-animation-name: none;
+        -moz-animation-name: none;
         animation-name: none;
     }
 
@@ -1431,7 +1504,7 @@ summary::marker {
 
     .background-js div {
         position: fixed;
-        top: 50px;
+        top: 49px;
         left: 0;
         width: 100%;
         height: 100%;
@@ -1474,7 +1547,7 @@ summary::marker {
 
     .toltip-text__header-number {
         font-family: Myriad Pro Regular;
-        color: #00aa4b;
+        color: $color-green2;
         font-size: 24px;
         line-height: normal;
     }
@@ -1483,7 +1556,7 @@ summary::marker {
         font-family: MyriadPro-LightSemiExt;
         font-size: 16px;
         line-height: normal;
-        color: #777777;
+        color: $color-gray2;
     }
 
     .toltip-text__list-header {
@@ -1492,7 +1565,7 @@ summary::marker {
         font-family: MyriadPro-LightSemiExt;
         font-size: 16px;
         line-height: normal;
-        color: #000000;
+        color: $color-black5;
 
     }
 
@@ -1505,7 +1578,7 @@ summary::marker {
         font-family: MyriadPro-LightSemiExt;
         font-size: 18px;
         line-height: normal;
-        color: #000000;
+        color: $color-black5;
     }
 
     .toltip-text__list-link:hover,
@@ -1564,14 +1637,14 @@ summary::marker {
         font-family: Myriad Pro Regular;
         font-size: 24px;
         line-height: normal;
-        color: #000000;
+        color: $color-black5;
     }
 
     .toltip-form__header-comment {
         font-family: MyriadPro-LightSemiExt;
         font-size: 16px;
         line-height: normal;
-        color: #777777;
+        color: $color-gray2;
     }
 
     .toltip-form__form {
@@ -1595,7 +1668,7 @@ summary::marker {
         font-family: MyriadPro-LightSemiExt;
         font-size: 16px;
         line-height: normal;
-        color: #000000;
+        color: $color-black5;
     }
 
     .form__client-input {
@@ -1604,15 +1677,15 @@ summary::marker {
         font-family: Myriad Pro Regular;
         font-size: 18px;
         line-height: normal;
-        color: #000000;
+        color: $color-black5;
         background-color: transparent;
         border: none;
-        border-bottom: 2px solid #c6c6c6;
+        border-bottom: 2px solid $color-gray9;
     }
 
     .form__client-input:focus {
         outline: none;
-        border-bottom: 2px solid #ff9d0c;
+        border-bottom: 2px solid $color-yellow5;
     }
 
     .form__client-number-wrapper {
@@ -1627,7 +1700,7 @@ summary::marker {
         font-family: MyriadPro-LightSemiExt;
         font-size: 16px;
         line-height: normal;
-        color: #000000;
+        color: $color-black5;
     }
 
     .form__button {
@@ -1639,7 +1712,7 @@ summary::marker {
         font-size: 18px;
         line-height: normal;
         border-radius: 22.5px;
-        background-color: #ffaf2d;
+        background-color: $color-yellow2;
 
     }
 
@@ -1702,7 +1775,7 @@ summary::marker {
 
     .header__logo-name {
         font-size: 33px;
-        color: #171717;
+        color: $color-black4;
     }
 
     .header__logo-subname_mobile {
@@ -1893,6 +1966,8 @@ summary::marker {
         box-sizing: border-box;
         background-color: transparent;
         display: block;
+        -webkit-animation: none;
+        -moz-animation: none;
         animation: none;
         z-index: 998;
 
@@ -1933,6 +2008,9 @@ summary::marker {
         align-items: center;
         width: auto;
 
+    }
+    .header__category-item:hover, .header__category-item:focus {
+        opacity: 0.8;
     }
 
     .header__category-item::after {
@@ -2008,7 +2086,7 @@ summary::marker {
         width: 100%;
         box-sizing: border-box;
         padding: 0;
-        border-bottom: 1px solid #bababa;
+        border-bottom: 1px solid $color-gray10;
     }
 
     .main-block__offers-item:last-child {
@@ -2026,7 +2104,7 @@ summary::marker {
         font-weight: 300;
         line-height: 2.81;
         text-align: left;
-        color: #303030;
+        color: $color-gray3;
     }
 
     .main-block__offers-link::after {
@@ -2037,6 +2115,9 @@ summary::marker {
         right: 15px;
         color: rgba(48, 48, 48, 0.4);
         font-family: MyriadPro-SemiExt;
+    }
+    .main-block__offers-link:hover, .main-block__offers-link:focus {
+        opacity: 0.8;
     }
 
     .swiper-container {
@@ -2099,7 +2180,9 @@ summary::marker {
         padding: 10px 20px;
         font-size: 18px;
     }
-
+    .context__button:hover, .context__button:focus {
+        opacity: 0.8;
+    }
     .swiper-slide__pic {
         display: flex;
         align-items: flex-end;
@@ -2110,12 +2193,6 @@ summary::marker {
         height: 357px;
 
     }
-
-
-
-
-
-
 
 
 
@@ -2155,7 +2232,9 @@ summary::marker {
         font-size: 16px;
         font-weight: 300;
     }
-
+    .main-block__sale-link:hover, .main-block__sale-link:focus {
+        opacity: 0.8;
+    }
     .main-block__sale a::after {
         font-size: 16px;
     }
@@ -2184,9 +2263,11 @@ summary::marker {
     .main-block__brands-link {
         padding: 0;
         min-height: 71px;
-        border-left: 1px solid #e7e6e6;
+        border-left: 1px solid $color-white3;
     }
-
+    .main-block__brands-link:hover, .main-block__brands-link:focus {
+        opacity: 0.8;
+    }
     .main-block__brands-img {
         width: 135px;
         height: 35px;
@@ -2211,7 +2292,7 @@ summary::marker {
         margin: 0 0 50px 0;
         font-family: Myriad Pro Regular;
         font-size: 40px;
-        color: #121212;
+        color: $color-black1;
         line-height: normal;
     }
 
@@ -2267,14 +2348,14 @@ summary::marker {
         font-family: MyriadPro-LightSemiExt;
         font-size: 16px;
         line-height: normal;
-        color: #00aa4b;
+        color: $color-green1;
     }
 
     .new__autor-date {
         font-family: MyriadPro-LightSemiExt;
         font-size: 16px;
         line-height: normal;
-        color: #777777;
+        color: $color-gray2;
     }
 
     .new__title {
@@ -2282,7 +2363,7 @@ summary::marker {
         margin: 0 0 20px 0;
         font-family: Myriad Pro Regular;
         font-size: 24px;
-        color: #121212;
+        color: $color-black1;
         line-height: normal;
     }
 
@@ -2292,7 +2373,7 @@ summary::marker {
         font-family: MyriadPro-LightSemiExt;
         font-size: 16px;
         line-height: normal;
-        color: #121212;
+        color: $color-black1;
         text-overflow: ellipsis;
     }
 
@@ -2303,12 +2384,14 @@ summary::marker {
         font-family: MyriadPro-SemiExt;
         font-size: 16px;
         font-weight: 300;
-        color: #121212;
+        color: $color-black1;
         line-height: normal;
         border-radius: 17.5px;
-        border: 2px solid #121212;
+        border: 2px solid $color-black1;
     }
-    .main-news__button:hover, .main-news__button:focus {
+
+    .main-news__button:hover,
+    .main-news__button:focus {
         opacity: 0.8;
     }
 
@@ -2329,7 +2412,7 @@ summary::marker {
     }
 
     .main-recommendations__header-text {
-        color: #787878;
+        color: $color-gray4;
         font-size: 16px;
     }
 
@@ -2392,7 +2475,9 @@ summary::marker {
 
     .main-recommendations__banners-small {
         width: 785px;
-
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .main-recommendations__banner_general {
@@ -2414,6 +2499,33 @@ summary::marker {
         text-align: center;
     }
 
+    .main-recommendations__banner_general .banner__img {
+        width: 433px;
+        height: 481px;
+    }
+
+    .banner__img-container {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .main-recommendations__banners-small .banner__img-container {
+        margin-left: 57px;
+    }
+
+    .main-recommendations__banner_black .banner__img-container {
+        margin: 0 57px 0 0;
+    }
+
+    .main-recommendations__banners-small .banner__img {
+        width: 300px;
+        height: 100%;
+    }
+
+    .main-recommendations__banner_black .banner__img {
+        width: 200px;
+    }
 
     .main-about-us {
         padding: 0 10px;
@@ -2495,7 +2607,7 @@ summary::marker {
         margin: 0 0 50px 0;
         font-size: 40px;
         font-family: MyriadPro-LightSemiExt;
-        color: #121212;
+        color: $color-black1;
     }
 
     .main-about-us__text-hidden ul {
@@ -2505,7 +2617,7 @@ summary::marker {
         font-size: 18px;
         font-weight: 300;
         line-height: normal;
-        color: #121212;
+        color: $color-black1;
     }
 
     .main-about-us__button {
@@ -2513,6 +2625,9 @@ summary::marker {
         width: 50px;
         height: 50px;
         margin-top: 43px;
+    }
+    .main-about-us__button:hover, .main-about-us__button:focus {
+        opacity: 0.8;
     }
 
     .main-about-us__button::after {
@@ -2529,7 +2644,7 @@ summary::marker {
     .footer__top-wrapper {
         min-width: 1340px;
         width: 100%;
-        background-color: #282828;
+        background-color: $color-gray8;
     }
 
     .footer__top-container {
@@ -2563,7 +2678,7 @@ summary::marker {
         font-stretch: normal;
         font-style: normal;
         line-height: 0.8;
-        color: #777777;
+        color: $color-gray2;
     }
 
     .footer__top-nav-item summary::after {
@@ -2579,12 +2694,15 @@ summary::marker {
     .top-nav-item__list-item {
         padding: 5px 0;
         font-size: 16px;
+
     }
 
     .top-nav-item__list-link {
         font-size: 16px;
     }
-
+    .top-nav-item__list-link:hover, .top-nav-item__list-link:focus {
+        opacity: 0.8;
+    }
     .footer__top-nav-item:last-child .top-nav-item__list-item {
         padding: 10px 0;
     }
@@ -2675,10 +2793,14 @@ summary::marker {
         box-sizing: border-box;
         font-family: MyriadPro-LightSemiExt;
         font-size: 18px;
-        color: #303030;
-        border-bottom: 1px solid #e8e8e8;
+        color: $color-gray3;
+        border-bottom: 1px solid $color-gray11;
+        cursor: pointer;
     }
-
+    .category-first__button:hover, .category-first__button:focus {
+        color: $color-yellow2;
+    }
+    
     .category-first__button:last-child {
         border: none;
     }
@@ -2692,9 +2814,14 @@ summary::marker {
         color: rgba(48, 48, 48, 0.4);
         font-family: MyriadPro-SemiExt;
     }
+    .category-first__button:hover::after, .category-first__button:focus::after {
+        color: rgba(0, 173, 0, 0.4);
+    }
+
+
 
     .category-first__radio1:checked~.category-first__button-wrapper .category-first__button_1 {
-        color: #ffaf2d;
+        color: $color-yellow2;
     }
 
     .category-first__radio1:checked~.category-first__button-wrapper .category-first__button_1::after {
@@ -2723,13 +2850,13 @@ summary::marker {
         min-width: 348px;
         padding: 20px 0;
         box-sizing: border-box;
-        background-color: #f1f1f1;
+        background-color: $color-gray5;
     }
 
     .content-one__list {
         padding: 20px 30px;
         margin: 0;
-        border-bottom: 1px solid #e8e8e8;
+        border-bottom: 1px solid $color-gray11;
         box-sizing: border-box;
     }
 
@@ -2741,13 +2868,15 @@ summary::marker {
         font-family: MyriadPro-LightSemiExt;
         font-size: 18px;
         line-height: normal;
-        color: #121212;
+        color: $color-black1;
     }
-
+    .content-one__list-link:hover, .content-one__list-link:focus {
+        opacity: 0.8;
+    }
     .content-one__brand-container {
         padding: 20px 30px;
         margin: 0;
-        border-bottom: 1px solid #e8e8e8;
+        border-bottom: 1px solid $color-gray11;
         box-sizing: border-box;
     }
 
@@ -2758,7 +2887,7 @@ summary::marker {
         font-size: 18px;
         line-height: normal;
         font-weight: normal;
-        color: #777777;
+        color: $color-gray2;
     }
 
     .content-one__brand-list {
@@ -2775,11 +2904,13 @@ summary::marker {
         font-size: 24px;
         line-height: normal;
         font-weight: normal;
-        color: #303030;
+        color: $color-gray3;
     }
-
+    .content-one__brand-link:hover, .content-one__brand-link:focus {
+        color: $color-yellow2;
+    }
     .content-one__list-link_current {
-        color: #ffaf2d;
+        color: $color-yellow2;
     }
 
 
@@ -2831,7 +2962,7 @@ summary::marker {
         font-family: MyriadPro-LightSemiExt;
         font-size: 18px;
         line-height: normal;
-        color: #303030;
+        color: $color-gray3;
     }
 
     .content-one__pic-wrapper {
@@ -2842,7 +2973,7 @@ summary::marker {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        background-color: #00aa4b;
+        background-color: $color-green1;
     }
 
     .content-one__pic-img {
@@ -2863,13 +2994,15 @@ summary::marker {
     .content-one__pic-button {
         padding: 10px 25px;
         border-radius: 5px;
-        background-color: #ffaf2d;
+        background-color: $color-yellow2;
         font-family: Myriad Pro;
         font-size: 18px;
         line-height: normal;
         color: $color-white1;
     }
-
+    .content-one__pic-button:hover, .content-one__pic-button:focus {
+        opacity: 0.8;
+    }
 
 
     .popap-open-js {
