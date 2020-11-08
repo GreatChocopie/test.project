@@ -186,6 +186,10 @@ summary::marker {
   display: none;
   position: fixed;
   height: 100%;
+  width: 100%;
+  left: 0;
+  top: 104px;
+  background-color: #ffffff;
 }
 
 .header__nav-menu-open_close {
@@ -222,10 +226,10 @@ summary::marker {
 }
 
 .header__nav {
-  position: fixed;
   overflow-y: scroll;
-  left: 0;
-  top: 104px;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   height: 100%;
   width: 100%;
   padding: 30px;
@@ -1469,6 +1473,8 @@ summary::marker {
   }
   .header__nav-menu {
     position: relative;
+    top: 0;
+    left: 0;
     display: block;
     width: 100%;
     background-color: #00aa4b;
