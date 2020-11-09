@@ -29,91 +29,6 @@ $color-yellow3: #e19a32;
 $color-yellow4: #faad3d;
 $color-yellow5: #ff9d0c;
 $color-pink1: #d5bee7;
-@-moz-keyframes zoomMenu {
-    from {
-
-        top: 174px;
-        height: 0;
-    }
-
-    to {
-
-
-        top: 105px;
-        height: 100%;
-    }
-}
-@-webkit-keyframes zoomMenu {
-    from {
-
-        top: 174px;
-        height: 0;
-    }
-
-    to {
-
-
-        top: 105px;
-        height: 100%;
-    }
-}
-
-@keyframes zoomMenu {
-    from {
-
-        top: 174px;
-        height: 0;
-    }
-
-    to {
-
-
-        top: 105px;
-        height: 100%;
-    }
-}
-@-moz-keyframes zoomMenu-reverse {
-    from {
-
-        top: 105px;
-        height: 100%;
-    }
-
-    to {
-        top: 174px;
-        height: 0;
-
-    }
-}
-@-webkit-keyframes zoomMenu-reverse {
-    from {
-
-        top: 105px;
-        height: 100%;
-    }
-
-    to {
-        top: 174px;
-        height: 0;
-
-    }
-}
-
-@keyframes zoomMenu-reverse {
-    from {
-
-        top: 105px;
-        height: 100%;
-    }
-
-    to {
-        top: 174px;
-        height: 0;
-
-    }
-}
-
-
 
 
 
@@ -183,7 +98,6 @@ summary::marker {
 
 
 .header__nav-wrapper {
-    min-width: 670px;
     width: 100%;
     background-color: $color-gray5;
 }
@@ -192,7 +106,7 @@ summary::marker {
     position: relative;
     margin: 0 auto;
     padding: 15px 30px;
-    min-width: 670px;
+    min-width: 732px;
     max-width: 767px;
     box-sizing: border-box;
     border-bottom: solid 1px $color-gray6;
@@ -452,14 +366,13 @@ summary::marker {
 }
 
 .header__category-wrapper {
-    min-width: 670px;
     width: 100%;
     background-color: $color-gray5;
 }
 
 .header__category-open-container {
     margin: 0 auto;
-    min-width: 670px;
+    min-width: 732px;
     max-width: 767px;
     box-sizing: border-box;
 }
@@ -595,7 +508,7 @@ summary::marker {
 
 
 .main {
-    min-width: 670px;
+    min-width: 732px;
     max-width: 767px;
 }
 
@@ -811,7 +724,7 @@ summary::marker {
 .main-block__brands {
     margin: 0 auto;
     padding: 15px 30px;
-    min-width: 670px;
+    min-width: 732px;
     max-width: 767px;
     box-sizing: border-box;
 }
@@ -879,7 +792,7 @@ summary::marker {
 .main-recommendations {
     margin: 0 auto;
     padding: 15px 30px;
-    min-width: 670px;
+    min-width: 732px;
     max-width: 767px;
     box-sizing: border-box;
     display: flex;
@@ -1010,7 +923,7 @@ summary::marker {
 .main-about-us {
     margin: 0 auto;
     padding: 15px 30px;
-    min-width: 670px;
+    min-width: 732px;
     max-width: 767px;
     box-sizing: border-box;
     display: flex;
@@ -1145,7 +1058,6 @@ summary::marker {
 }
 
 .footer__top-wrapper {
-    min-width: 670px;
     width: 100%;
     background-color: $color-gray8;
 }
@@ -1153,7 +1065,7 @@ summary::marker {
 .footer__top-container {
     margin: 0 auto;
     padding: 45px;
-    min-width: 670px;
+    min-width: 732px;
     max-width: 767px;
     box-sizing: border-box;
 }
@@ -1247,7 +1159,6 @@ summary::marker {
 }
 
 .footer__bottom-wrapper {
-    min-width: 670px;
     width: 100%;
     background-color: $color-black8;
 }
@@ -1255,7 +1166,7 @@ summary::marker {
 .footer__bottom-container {
     margin: 0 auto;
     padding: 40px 45px;
-    min-width: 670px;
+    min-width: 732px;
     max-width: 767px;
     box-sizing: border-box;
 }
@@ -1312,7 +1223,6 @@ summary::marker {
     }
 
     .header__nav-wrapper {
-        min-width: 1340px;
         width: 100%;
         background-color: transparent;
     }
@@ -1939,7 +1849,6 @@ summary::marker {
 
 
     .header__category-wrapper {
-        min-width: 1340px;
         width: 100%;
         background-color: $color-white1;
         transition: 0.5s ease-out;
