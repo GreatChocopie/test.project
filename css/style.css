@@ -62,7 +62,20 @@ summary::marker {
   display: none;
 }
 
+.header {
+  min-width: 732px;
+}
+
+.main {
+  min-width: 732px;
+}
+
+.footer {
+  min-width: 732px;
+}
+
 .header__nav-wrapper {
+  min-width: 732px;
   width: 100%;
   background-color: #f1f1f1;
 }
@@ -389,6 +402,7 @@ summary::marker {
 }
 
 .header__category-wrapper {
+  min-width: 732px;
   width: 100%;
   background-color: #f1f1f1;
 }
@@ -435,6 +449,7 @@ summary::marker {
   overflow-y: scroll;
   left: 0;
   top: 0;
+  min-width: 732px;
   height: 100%;
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -1391,6 +1406,7 @@ summary::marker {
 
 @media (min-width: 767px) {
   .header {
+    min-width: 1340px;
     width: 100%;
     position: fixed;
     z-index: 10;
@@ -1577,24 +1593,33 @@ summary::marker {
     background-color: rgba(255, 255, 255, 0.2);
     outline: none;
   }
-  .desctop-number__toltip-wrapper {
-    display: none;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    width: 754px;
-    height: 354px;
-    z-index: 1005;
-  }
-  .background-js div {
+  .background-js {
+    position: fixed;
+    top: 48px;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(35, 35, 35, 0.5);
+    z-index: 100;
+  }
+  .desctop-number__toltip-wrapper {
+    min-width: 1340px;
+    max-width: 1563px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   .background-js-open {
     display: block;
   }
   .desctop-number__toltip {
+    width: 754px;
+    height: 354px;
+    margin: 0 0 0 auto;
     padding: 50px 60px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -2131,7 +2156,8 @@ summary::marker {
             align-items: center;
     width: auto;
   }
-  .header__category-item:hover, .header__category-item:focus {
+  .header__category-item:hover,
+  .header__category-item:focus {
     opacity: 0.8;
   }
   .header__category-item::after {
@@ -2153,9 +2179,10 @@ summary::marker {
     display: none;
   }
   .main {
+    margin: 0 auto;
     padding-top: 244px;
-    min-width: 100%;
     max-width: 100%;
+    min-width: 1340px;
   }
   .main-block {
     margin: 0 auto;
@@ -2244,7 +2271,8 @@ summary::marker {
     color: rgba(48, 48, 48, 0.4);
     font-family: MyriadPro-SemiExt;
   }
-  .main-block__offers-link:hover, .main-block__offers-link:focus {
+  .main-block__offers-link:hover,
+  .main-block__offers-link:focus {
     opacity: 0.8;
   }
   .swiper-container {
@@ -2297,7 +2325,8 @@ summary::marker {
     padding: 10px 20px;
     font-size: 18px;
   }
-  .context__button:hover, .context__button:focus {
+  .context__button:hover,
+  .context__button:focus {
     opacity: 0.8;
   }
   .swiper-slide__pic {
@@ -2347,7 +2376,8 @@ summary::marker {
     font-size: 16px;
     font-weight: 300;
   }
-  .main-block__sale-link:hover, .main-block__sale-link:focus {
+  .main-block__sale-link:hover,
+  .main-block__sale-link:focus {
     opacity: 0.8;
   }
   .main-block__sale a::after {
@@ -2374,7 +2404,8 @@ summary::marker {
     min-height: 71px;
     border-left: 1px solid #e7e6e6;
   }
-  .main-block__brands-link:hover, .main-block__brands-link:focus {
+  .main-block__brands-link:hover,
+  .main-block__brands-link:focus {
     opacity: 0.8;
   }
   .main-block__brands-img {
@@ -2755,7 +2786,8 @@ summary::marker {
     height: 50px;
     margin-top: 43px;
   }
-  .main-about-us__button:hover, .main-about-us__button:focus {
+  .main-about-us__button:hover,
+  .main-about-us__button:focus {
     opacity: 0.8;
   }
   .main-about-us__button::after {
@@ -2773,6 +2805,11 @@ summary::marker {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .footer {
+    margin: 0 auto;
+    min-width: 1340px;
+    width: 100%;
   }
   .footer__top-wrapper {
     min-width: 1340px;
@@ -2828,7 +2865,8 @@ summary::marker {
   .top-nav-item__list-link {
     font-size: 16px;
   }
-  .top-nav-item__list-link:hover, .top-nav-item__list-link:focus {
+  .top-nav-item__list-link:hover,
+  .top-nav-item__list-link:focus {
     opacity: 0.8;
   }
   .footer__top-nav-item:last-child .top-nav-item__list-item {
@@ -2887,6 +2925,9 @@ summary::marker {
   .popap {
     position: fixed;
     overflow-y: scroll;
+    min-width: 1340px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     width: 100%;
     height: 100%;
     top: 0;
@@ -2899,10 +2940,7 @@ summary::marker {
   }
   .category-first__container {
     padding: 0;
-    margin: 212px auto 0 0;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    margin: 212px auto 212px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2939,7 +2977,8 @@ summary::marker {
     border-bottom: 1px solid #e8e8e8;
     cursor: pointer;
   }
-  .category-first__button:hover, .category-first__button:focus {
+  .category-first__button:hover,
+  .category-first__button:focus {
     color: #ffaf2d;
   }
   .category-first__button:last-child {
@@ -2954,7 +2993,8 @@ summary::marker {
     color: rgba(48, 48, 48, 0.4);
     font-family: MyriadPro-SemiExt;
   }
-  .category-first__button:hover::after, .category-first__button:focus::after {
+  .category-first__button:hover::after,
+  .category-first__button:focus::after {
     color: rgba(0, 173, 0, 0.4);
   }
   .category-first__radio1:checked ~ .category-first__button-wrapper .category-first__button_1 {
@@ -3011,7 +3051,8 @@ summary::marker {
     line-height: normal;
     color: #121212;
   }
-  .content-one__list-link:hover, .content-one__list-link:focus {
+  .content-one__list-link:hover,
+  .content-one__list-link:focus {
     opacity: 0.8;
   }
   .content-one__brand-container {
@@ -3044,7 +3085,8 @@ summary::marker {
     font-weight: normal;
     color: #303030;
   }
-  .content-one__brand-link:hover, .content-one__brand-link:focus {
+  .content-one__brand-link:hover,
+  .content-one__brand-link:focus {
     color: #ffaf2d;
   }
   .content-one__list-link_current {
@@ -3135,7 +3177,8 @@ summary::marker {
     line-height: normal;
     color: #ffffff;
   }
-  .content-one__pic-button:hover, .content-one__pic-button:focus {
+  .content-one__pic-button:hover,
+  .content-one__pic-button:focus {
     opacity: 0.8;
   }
   .popap-open-js {
