@@ -175,11 +175,17 @@ summary::marker {
   overflow-x: visible;
 }
 
+.modal-open-js_nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000000;
+}
+
 .header__nav-menu {
   overflow-y: scroll;
   display: none;
   position: fixed;
-  top: 0;
   left: 0;
   top: 104px;
   height: calc(100% - 104px);
@@ -1508,21 +1514,23 @@ summary::marker {
     opacity: 0.8;
   }
   .desctop-mail {
+    position: relative;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     display: block;
     z-index: 19;
   }
   .desctop-number {
+    position: relative;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     display: block;
     z-index: 1003;
   }
   .desctop-mail__text {
+    position: relative;
     padding: 15px 10px 15px 35px;
     min-height: 48px;
-    position: relative;
     font-family: Myriad Pro;
     font-size: 16px;
     font-weight: normal;
@@ -1546,6 +1554,7 @@ summary::marker {
     position: absolute;
     left: 0;
     bottom: -51px;
+    z-index: 4444444;
   }
   .desctop-mail__toltip {
     padding: 15px 35px;
@@ -1857,7 +1866,9 @@ summary::marker {
     display: block;
   }
   .header__search-wrapper {
-    position: relative;
+    position: absolute;
+    top: 48px;
+    left: 0;
     display: block;
     width: 100%;
     background-color: #e8e7e7;
@@ -2082,6 +2093,7 @@ summary::marker {
     color: #171717;
   }
   .header__category-wrapper {
+    padding-top: 70px;
     width: 100%;
     background-color: #ffffff;
     -webkit-transition: 0.5s ease-out;

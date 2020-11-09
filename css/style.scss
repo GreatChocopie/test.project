@@ -1353,12 +1353,14 @@ summary::marker {
     }
 
     .desctop-mail {
+        position: relative;
         box-sizing: border-box;
         display: block;
         z-index: 19;
     }
 
     .desctop-number {
+        position: relative;
         box-sizing: border-box;
         display: block;
         z-index: 1003;
@@ -1366,9 +1368,9 @@ summary::marker {
 
 
     .desctop-mail__text {
+        position: relative;
         padding: 15px 10px 15px 35px;
         min-height: 48px;
-        position: relative;
         font-family: Myriad Pro;
         font-size: 16px;
         font-weight: normal;
@@ -1394,6 +1396,7 @@ summary::marker {
         position: absolute;
         left: 0;
         bottom: -51px;
+        z-index: 4444444;
     }
 
     .desctop-mail__toltip {
@@ -1685,7 +1688,9 @@ summary::marker {
 
 
     .header__search-wrapper {
-        position: relative;
+        position: absolute;
+        top: 48px;
+        left: 0;
         display: block;
         width: 100%;
         background-color: $color-gray1;
@@ -1897,6 +1902,7 @@ summary::marker {
 
 
     .header__category-wrapper {
+        padding-top: 70px;
         width: 100%;
         background-color: $color-white1;
         transition: 0.5s ease-out;
