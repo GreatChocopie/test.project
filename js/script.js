@@ -7,7 +7,7 @@ var categoryCloseButton = categoryWrapper.querySelector(".header__category-close
 var menuWrapper = topMenu.querySelector(".header__nav-menu");
 var body = document.querySelector("body");
 var numberButton = topMenu.querySelector(".desctop-number__text");
-var numberToltip = document.querySelector(".desctop-number__toltip-wrapper");
+var numberToltip = document.querySelector(".desctop-number__toltip");
 var background = document.querySelector(".background-js");
 var buttonSearch = document.querySelector(".header__search-open");
 var popapSearch = document.querySelector(".header__search-form");
@@ -138,7 +138,7 @@ function openPopapFirst(evt) {
 };
 
 function openNumberPopap(evt) {
-  if (numberToltip.classList.contains("desctop-number__toltip_open-js")) {
+  if (background.classList.contains("background-js-open")) {
     console.log("already opened map");
     evt.preventDefault();
     return false;
@@ -146,7 +146,7 @@ function openNumberPopap(evt) {
   console.log("opening map");
   evt.preventDefault();
   evt.stopPropagation();
-  numberToltip.classList.add("desctop-number__toltip_open-js");
+  // numberToltip.classList.add("desctop-number__toltip_open-js");
   background.classList.add("background-js-open");
   document.addEventListener("click", closeNumberPopap);
 };
@@ -182,8 +182,9 @@ function openMenu(evt) {
   evt.preventDefault();
   
   slideDown(menuWrapper, 500);
+
   menuButton.classList.add("header__nav-menu-open_close");
-  // navContainer.classList.add("modal-open-js_nav");
+  navContainer.classList.add("modal-open-js_nav");
   body.classList.add("modal-open-js_body");
 
 
@@ -248,7 +249,7 @@ function closeNumberPopap(evt) {
   if (!elemHasParent(target, numberToltip) || target == numberButton) {
     console.log("closing map");
     evt.preventDefault();
-    numberToltip.classList.remove("desctop-number__toltip_open-js");
+    // numberToltip.classList.remove("desctop-number__toltip_open-js");
     // body.classList.remove("modal-open-js_body");
     background.classList.remove("background-js-open");
     numberButton.blur();
