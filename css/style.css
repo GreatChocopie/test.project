@@ -1416,7 +1416,7 @@ summary::marker {
     border-bottom: none;
   }
   .header__nav-menu {
-    overflow-y: hidden;
+    overflow-y: visible;
     margin: 0 auto;
     display: block;
     width: 100%;
@@ -1426,7 +1426,7 @@ summary::marker {
     position: relative;
     top: 0;
     left: 0;
-    overflow-y: hidden;
+    overflow-y: visible;
     margin: 0 auto;
     padding: 0;
     width: 100%;
@@ -1531,12 +1531,12 @@ summary::marker {
   }
   .desctop-mail__toltip-wrapper {
     display: none;
+  }
+  .desctop-mail__toltip {
     position: absolute;
     left: 0;
     bottom: -51px;
     z-index: 4444444;
-  }
-  .desctop-mail__toltip {
     padding: 15px 35px;
     width: 163px;
     -webkit-box-sizing: border-box;
