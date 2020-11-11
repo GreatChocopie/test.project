@@ -149,7 +149,7 @@ summary::marker {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-   
+
 }
 
 .header__nav-menu-open span {
@@ -200,6 +200,7 @@ summary::marker {
     overflow-x: visible;
 
 }
+
 .modal-open-js_nav {
     position: fixed;
     top: 0;
@@ -1265,8 +1266,10 @@ summary::marker {
 
 
     .header__nav-wrapper {
+        // position: relative;
         width: 100%;
         background-color: transparent;
+        // z-index: 12;
     }
 
     .header__nav-menu-open {
@@ -1279,6 +1282,7 @@ summary::marker {
         padding: 0;
         max-width: 100%;
         border-bottom: none;
+        position: relative;
         z-index: 12;
     }
 
@@ -1291,12 +1295,10 @@ summary::marker {
         display: block;
         width: 100%;
         background-color: $color-green1;
-
     }
 
     .header__nav {
         overflow-y: hidden;
-        position: static;
         margin: 0 auto;
         padding: 0;
         width: 100%;
@@ -1307,6 +1309,7 @@ summary::marker {
         justify-content: space-between;
         align-items: center;
         background-color: transparent;
+
     }
 
     .header__nav-list {
@@ -1392,7 +1395,7 @@ summary::marker {
     }
 
     .desctop-mail__toltip-wrapper {
-        opacity: 1;
+        display: none;
         position: absolute;
         left: 0;
         bottom: -51px;
@@ -1419,11 +1422,11 @@ summary::marker {
     }
 
     .desctop-mail__text:hover~.desctop-mail__toltip-wrapper {
-        opacity: 1;
+        display: block;
     }
 
     .desctop-mail__text:focus~.desctop-mail__toltip-wrapper {
-        opacity: 1;
+        display: block;
     }
 
 
@@ -1459,7 +1462,7 @@ summary::marker {
 
     .background-js {
         position: fixed;
-        top: 48px;
+        top: 49px;
         left: 0;
         width: 100%;
         height: 100%;
@@ -1482,7 +1485,7 @@ summary::marker {
     .desctop-number__toltip {
         width: 754px;
         height: 354px;
-        margin:  0 0 0 auto;
+        margin: 0 0 0 auto;
         padding: 50px 60px;
         box-sizing: border-box;
         background-color: $color-white1;
@@ -1688,13 +1691,13 @@ summary::marker {
 
 
     .header__search-wrapper {
-        position: absolute;
-        top: 48px;
-        left: 0;
+        position: static;
+        // top: 48px;
+        // left: 0;
         display: block;
         width: 100%;
         background-color: $color-gray1;
-        z-index: 12;
+        // z-index: 12;
     }
 
     .header__search-container {
@@ -1902,7 +1905,7 @@ summary::marker {
 
 
     .header__category-wrapper {
-        padding-top: 70px;
+
         width: 100%;
         background-color: $color-white1;
         transition: 0.5s ease-out;
@@ -1913,17 +1916,17 @@ summary::marker {
         display: block;
         margin: 0 auto;
         padding: 0;
-        position: relative;
+        position: static;
         overflow-y: hidden;
         height: auto;
         width: 100%;
         max-width: 1563px;
         box-sizing: border-box;
-        z-index: 11;
+        // z-index: 11;
     }
 
     .header__category {
-        position: relative;
+        position: static;
         overflow-y: hidden;
         height: auto;
         width: 100%;
@@ -1933,7 +1936,7 @@ summary::marker {
         box-sizing: border-box;
         background-color: transparent;
         display: block;
-        z-index: 11;
+        // z-index: 11;
 
     }
 
@@ -2765,7 +2768,7 @@ summary::marker {
         display: flex;
         border: none;
     }
-  
+
     .category-first__button-wrapper {
         width: 399px;
         box-sizing: border-box;

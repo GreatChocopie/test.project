@@ -1435,6 +1435,7 @@ summary::marker {
     padding: 0;
     max-width: 100%;
     border-bottom: none;
+    position: relative;
     z-index: 12;
   }
   .header__nav-menu {
@@ -1449,7 +1450,6 @@ summary::marker {
   }
   .header__nav {
     overflow-y: hidden;
-    position: static;
     margin: 0 auto;
     padding: 0;
     width: 100%;
@@ -1550,7 +1550,7 @@ summary::marker {
     background-position: center;
   }
   .desctop-mail__toltip-wrapper {
-    opacity: 1;
+    display: none;
     position: absolute;
     left: 0;
     bottom: -51px;
@@ -1576,10 +1576,10 @@ summary::marker {
     outline: none;
   }
   .desctop-mail__text:hover ~ .desctop-mail__toltip-wrapper {
-    opacity: 1;
+    display: block;
   }
   .desctop-mail__text:focus ~ .desctop-mail__toltip-wrapper {
-    opacity: 1;
+    display: block;
   }
   .desctop-number__text {
     padding: 15px 10px 15px 35px;
@@ -1609,7 +1609,7 @@ summary::marker {
   }
   .background-js {
     position: fixed;
-    top: 48px;
+    top: 49px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -1866,13 +1866,10 @@ summary::marker {
     display: block;
   }
   .header__search-wrapper {
-    position: absolute;
-    top: 48px;
-    left: 0;
+    position: static;
     display: block;
     width: 100%;
     background-color: #e8e7e7;
-    z-index: 12;
   }
   .header__search-container {
     margin: 0 auto;
@@ -2093,7 +2090,6 @@ summary::marker {
     color: #171717;
   }
   .header__category-wrapper {
-    padding-top: 70px;
     width: 100%;
     background-color: #ffffff;
     -webkit-transition: 0.5s ease-out;
@@ -2104,17 +2100,16 @@ summary::marker {
     display: block;
     margin: 0 auto;
     padding: 0;
-    position: relative;
+    position: static;
     overflow-y: hidden;
     height: auto;
     width: 100%;
     max-width: 1563px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    z-index: 11;
   }
   .header__category {
-    position: relative;
+    position: static;
     overflow-y: hidden;
     height: auto;
     width: 100%;
@@ -2125,7 +2120,6 @@ summary::marker {
             box-sizing: border-box;
     background-color: transparent;
     display: block;
-    z-index: 11;
   }
   .header__category-open-container {
     display: none;
