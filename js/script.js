@@ -1,5 +1,4 @@
 var topMenu = document.querySelector(".header");
-var navContainer = topMenu.querySelector(".header__nav-wrapper");
 var menuButton = topMenu.querySelector(".header__nav-menu-open");
 var categoryButton = topMenu.querySelector(".header__category-open");
 var categoryWrapper  = topMenu.querySelector(".header__category-container");
@@ -12,12 +11,9 @@ var background = document.querySelector(".background-js");
 var buttonSearch = document.querySelector(".header__search-open");
 var popapSearch = document.querySelector(".header__search-form");
 var windowWidth = window.innerWidth;
-
 var categoryFirst =topMenu.querySelector(".header__category-item_first");
 var categorySecond =topMenu.querySelector(".header__category-item_second");
 var popapFirst = document.querySelector(".popap__category-first");
-
-
 
 
  /* SLIDE UP */
@@ -184,7 +180,6 @@ function openMenu(evt) {
   slideDown(menuWrapper, 500);
 
   menuButton.classList.add("header__nav-menu-open_close");
-  navContainer.classList.add("modal-open-js_nav");
   body.classList.add("modal-open-js_body");
 
 
@@ -269,7 +264,6 @@ function closeMenu(evt) {
     evt.preventDefault();
     slideUp(menuWrapper);
     menuButton.classList.remove("header__nav-menu-open_close");
-    navContainer.classList.remove("modal-open-js_nav");
     body.classList.remove("modal-open-js_body");
     document.removeEventListener("click", closeMenu);
 

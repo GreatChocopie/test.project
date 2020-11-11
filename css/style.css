@@ -16,6 +16,7 @@ input[type="radio"].visually-hidden {
 }
 
 body {
+  min-width: 732px;
   position: relative;
   font-family: Myriad Pro Regular;
   color: #121212;
@@ -63,15 +64,11 @@ summary::marker {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
   min-width: 732px;
-}
-
-.main {
-  min-width: 732px;
-}
-
-.footer {
-  min-width: 732px;
+  z-index: 10;
 }
 
 .header__nav-wrapper {
@@ -551,7 +548,7 @@ summary::marker {
 
 .main {
   min-width: 732px;
-  max-width: 767px;
+  padding-top: 188px;
 }
 
 .main-block__offers {
@@ -1203,6 +1200,10 @@ summary::marker {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.footer {
+  min-width: 732px;
 }
 
 .footer__top-wrapper {
@@ -2917,7 +2918,6 @@ summary::marker {
   .popap {
     position: fixed;
     overflow-y: scroll;
-    min-width: 1340px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 100%;
@@ -2937,6 +2937,9 @@ summary::marker {
     display: -ms-flexbox;
     display: flex;
     border: none;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   .category-first__button-wrapper {
     width: 399px;
