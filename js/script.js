@@ -127,7 +127,6 @@ function openPopapFirst(evt) {
   evt.preventDefault();
   evt.stopPropagation();
   popapFirst.classList.add("popap-open-js");
-  body.classList.add("modal-open-js_body");
 
 
   document.addEventListener("click", closePopapFirst);
@@ -230,7 +229,6 @@ function closePopapFirst(evt) {
     console.log("closing map");
     evt.preventDefault();
     popapFirst.classList.remove("popap-open-js");
-    body.classList.remove("modal-open-js_body");
     document.removeEventListener("click", closePopapFirst);
     console.log("listener removed");
   } else {
