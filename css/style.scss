@@ -233,7 +233,7 @@ summary::marker {
     display: none;
 }
 
-.desctop-number__toltip-wrapper {
+.desctop-number__tooltip-wrapper {
     display: none;
 }
 
@@ -1371,12 +1371,12 @@ summary::marker {
         background-position: center;
     }
 
-    .desctop-mail__toltip-wrapper {
+    .desctop-mail__tooltip-wrapper {
         display: none;
         
     }
 
-    .desctop-mail__toltip {
+    .desctop-mail__tooltip {
         position: absolute;
         left: 0;
         bottom: -51px;
@@ -1399,11 +1399,11 @@ summary::marker {
         outline: none;
     }
 
-    .desctop-mail__text:hover~.desctop-mail__toltip-wrapper {
+    .desctop-mail__text:hover~.desctop-mail__tooltip-wrapper {
         display: block;
     }
 
-    .desctop-mail__text:focus~.desctop-mail__toltip-wrapper {
+    .desctop-mail__text:focus~.desctop-mail__tooltip-wrapper {
         display: block;
     }
 
@@ -1448,7 +1448,7 @@ summary::marker {
         z-index: 100;
     }
 
-    .desctop-number__toltip-wrapper {
+    .desctop-number__tooltip-wrapper {
         min-width: 1340px;
         max-width: 1563px;
         margin: 0 auto;
@@ -1460,7 +1460,7 @@ summary::marker {
         display: block;
     }
 
-    .desctop-number__toltip {
+    .desctop-number__tooltip {
         width: 754px;
         height: 354px;
         margin: 0 0 0 auto;
@@ -1472,7 +1472,7 @@ summary::marker {
         z-index: 1004;
     }
 
-    .desctop-number__toltip-text {
+    .desctop-number__tooltip-text {
 
         box-sizing: border-box;
         display: flex;
@@ -1480,28 +1480,28 @@ summary::marker {
         justify-content: space-between;
     }
 
-    .toltip-text__header {
+    .tooltip-text__header {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         margin-bottom: 30px;
     }
 
-    .toltip-text__header-number {
+    .tooltip-text__header-number {
         font-family: Myriad Pro Regular;
         color: $color-green2;
         font-size: 24px;
         line-height: normal;
     }
 
-    .toltip-text__header-comment {
+    .tooltip-text__header-comment {
         font-family: MyriadPro-LightSemiExt;
         font-size: 16px;
         line-height: normal;
         color: $color-gray2;
     }
 
-    .toltip-text__list-header {
+    .tooltip-text__list-header {
         display: block;
         margin-bottom: 20px;
         font-family: MyriadPro-LightSemiExt;
@@ -1511,56 +1511,56 @@ summary::marker {
 
     }
 
-    .toltip-text__list {
+    .tooltip-text__list {
         padding: 0;
         margin: 0;
     }
 
-    .toltip-text__list-link {
+    .tooltip-text__list-link {
         font-family: MyriadPro-LightSemiExt;
         font-size: 18px;
         line-height: normal;
         color: $color-black5;
     }
 
-    .toltip-text__list-link:hover,
-    .toltip-text__list-link:focus {
+    .tooltip-text__list-link:hover,
+    .tooltip-text__list-link:focus {
         border-bottom: 1px solid #bababa;
     }
 
-    .toltip-text__list li {
+    .tooltip-text__list li {
         padding: 5px 0 5px 30px;
     }
 
-    .toltip-text__list-item1 {
+    .tooltip-text__list-item1 {
         background-image: url(../img/phone.png);
         background-repeat: no-repeat;
         background-position: top 5px left 0;
         background-size: 18px 20px;
     }
 
-    .toltip-text__list-item2 {
+    .tooltip-text__list-item2 {
         background-image: url(../img/viber.png);
         background-repeat: no-repeat;
         background-position: top 5px left 0;
         background-size: 18px 20px;
     }
 
-    .toltip-text__list-item3 {
+    .tooltip-text__list-item3 {
         background-image: url(../img/tel.png);
         background-repeat: no-repeat;
         background-position: top 5px left 0;
         background-size: 18px 20px;
     }
 
-    .toltip-text__list-item4 {
+    .tooltip-text__list-item4 {
         background-image: url(../img/whatsapp.png);
         background-repeat: no-repeat;
         background-position: top 5px left 0;
         background-size: 18px 20px;
     }
 
-    .desctop-number__toltip-form {
+    .desctop-number__tooltip-form {
         width: 260px;
         box-sizing: border-box;
         display: flex;
@@ -1568,28 +1568,28 @@ summary::marker {
         justify-content: space-between;
     }
 
-    .toltip-form__header {
+    .tooltip-form__header {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         margin-bottom: 30px;
     }
 
-    .toltip-form__header-headline {
+    .tooltip-form__header-headline {
         font-family: Myriad Pro Regular;
         font-size: 24px;
         line-height: normal;
         color: $color-black5;
     }
 
-    .toltip-form__header-comment {
+    .tooltip-form__header-comment {
         font-family: MyriadPro-LightSemiExt;
         font-size: 16px;
         line-height: normal;
         color: $color-gray2;
     }
 
-    .toltip-form__form {
+    .tooltip-form__form {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -1663,7 +1663,7 @@ summary::marker {
         opacity: 0.8;
     }
 
-    .desctop-number__toltip_open-js {
+    .desctop-number__tooltip_open-js {
         display: block;
     }
 

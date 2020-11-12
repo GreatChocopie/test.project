@@ -1,11 +1,12 @@
 var topMenu = document.querySelector(".header");
 var menuButton = topMenu.querySelector(".header__nav-menu-open");
+var menuWrapper = topMenu.querySelector(".header__nav");
 var categoryButton = topMenu.querySelector(".header__category-open");
 var categoryWrapper  = topMenu.querySelector(".header__category-container");
 var categoryCloseButton = categoryWrapper.querySelector(".header__category-close");
 var body = document.querySelector("body");
 var numberButton = topMenu.querySelector(".desctop-number__text");
-var numberToltip = document.querySelector(".desctop-number__toltip");
+var numberTooltip = document.querySelector(".desctop-number__tooltip");
 var background = document.querySelector(".background-js");
 var buttonSearch = document.querySelector(".header__search-open");
 var popapSearch = document.querySelector(".header__search-form");
@@ -39,7 +40,7 @@ var popapSecond = document.querySelector(".popap__category-second");
               target.style.removeProperty('overflow');
               target.style.removeProperty('transition-duration');
               target.style.removeProperty('transition-property');
-              //alert("!");
+  
         }, duration);
     }
 
@@ -95,15 +96,14 @@ if (windowWidth > 767) {
   let prevY = 0;
 
 window.addEventListener('scroll', function(e) {
-    let elem = document.querySelector(".header__category-wrapper"); // элемент который хотим спрятать
+    let elem = document.querySelector(".header__category-wrapper"); 
     let currentY = window.scrollY;
     if (currentY > prevY) {
-	// прокрутка вниз
-	// console.log('down');
+	
   elem.style.margin = "-130px 0 0 0";
     }
     else {
-	// прокрутка вверх, возвращение назад
+	
 	console.log('up')
 	elem.style.margin = "0";
     }
@@ -172,7 +172,7 @@ function openSearch(evt) {
   slideDown(popapSearch.firstElementChild);
 
   setTimeout(function(){
-      // Вызываем код отложенно, у него не будет этой цепочки вызовов
+     
       document.addEventListener("click", closeSearch);
   }, 1);
 
@@ -194,11 +194,8 @@ function openMenu(evt) {
   menuButton.classList.add("header__nav-menu-open_close");
   body.classList.add("modal-open-js_body");
 
-
-  // disableScroll();
-
   setTimeout(function(){
-    // Вызываем код отложенно, у него не будет этой цепочки вызовов
+
     document.addEventListener("click", closeMenu);
     
   }, 1);
@@ -238,7 +235,7 @@ function closePopapFirst(evt) {
   console.log(evt.target);
   var target = evt.target;
 
-  if (!elemHasParent(target, popapFirst) || target == closeMap) {
+  if (!elemHasParent(target, popapFirst)) {
     console.log("closing map");
     evt.preventDefault();
     popapFirst.classList.remove("popap-open-js");
@@ -253,7 +250,7 @@ function closePopapSecond(evt) {
   console.log(evt.target);
   var target = evt.target;
 
-  if (!elemHasParent(target, popapSecond) || target == closeMap) {
+  if (!elemHasParent(target, popapSecond)) {
     console.log("closing map");
     evt.preventDefault();
     popapSecond.classList.remove("popap-open-js");
@@ -267,7 +264,7 @@ function closeNumberPopap(evt) {
   console.log("close start");
   console.log(evt.target);
   var target = evt.target;
-  if (!elemHasParent(target, numberToltip) || target == numberButton) {
+  if (!elemHasParent(target, numberTooltip) || target == numberButton) {
     console.log("closing map");
     evt.preventDefault();
     background.classList.remove("background-js-open");
