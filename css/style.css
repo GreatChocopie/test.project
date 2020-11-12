@@ -2836,6 +2836,9 @@ summary::marker {
             box-sizing: border-box;
     border: none;
   }
+  .footer__top-nav-item:last-child {
+    display: none;
+  }
   .footer__top-nav-item summary {
     position: relative;
     width: 100%;
