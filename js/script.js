@@ -3,7 +3,6 @@ var menuButton = topMenu.querySelector(".header__nav-menu-open");
 var categoryButton = topMenu.querySelector(".header__category-open");
 var categoryWrapper  = topMenu.querySelector(".header__category-container");
 var categoryCloseButton = categoryWrapper.querySelector(".header__category-close");
-var menuWrapper = topMenu.querySelector(".header__nav");
 var body = document.querySelector("body");
 var numberButton = topMenu.querySelector(".desctop-number__text");
 var numberToltip = document.querySelector(".desctop-number__toltip");
@@ -14,7 +13,7 @@ var windowWidth = window.innerWidth;
 var categoryFirst =topMenu.querySelector(".header__category-item_first");
 var categorySecond =topMenu.querySelector(".header__category-item_second");
 var popapFirst = document.querySelector(".popap__category-first");
-
+var popapSecond = document.querySelector(".popap__category-second");
 
  /* SLIDE UP */
     var slideUp = function(target, duration=500)  {
@@ -132,6 +131,21 @@ function openPopapFirst(evt) {
   document.addEventListener("click", closePopapFirst);
 };
 
+function openPopapSecond(evt) {
+  if (popapSecond.classList.contains("popap-open-js")) {
+    console.log("already opened map");
+    evt.preventDefault();
+    return false;
+  }
+  console.log("opening map");
+  evt.preventDefault();
+  evt.stopPropagation();
+  popapSecond.classList.add("popap-open-js");
+
+
+  document.addEventListener("click", closePopapSecond);
+};
+
 function openNumberPopap(evt) {
   if (background.classList.contains("background-js-open")) {
     console.log("already opened map");
@@ -141,7 +155,6 @@ function openNumberPopap(evt) {
   console.log("opening map");
   evt.preventDefault();
   evt.stopPropagation();
-  // numberToltip.classList.add("desctop-number__toltip_open-js");
   background.classList.add("background-js-open");
   document.addEventListener("click", closeNumberPopap);
 };
@@ -235,6 +248,21 @@ function closePopapFirst(evt) {
     console.log("close - wrong elem, do nothing");
   }
 }
+function closePopapSecond(evt) {
+  console.log("close start");
+  console.log(evt.target);
+  var target = evt.target;
+
+  if (!elemHasParent(target, popapSecond) || target == closeMap) {
+    console.log("closing map");
+    evt.preventDefault();
+    popapSecond.classList.remove("popap-open-js");
+    document.removeEventListener("click", closePopapSecond);
+    console.log("listener removed");
+  } else {
+    console.log("close - wrong elem, do nothing");
+  }
+}
 function closeNumberPopap(evt) {
   console.log("close start");
   console.log(evt.target);
@@ -242,8 +270,6 @@ function closeNumberPopap(evt) {
   if (!elemHasParent(target, numberToltip) || target == numberButton) {
     console.log("closing map");
     evt.preventDefault();
-    // numberToltip.classList.remove("desctop-number__toltip_open-js");
-    // body.classList.remove("modal-open-js_body");
     background.classList.remove("background-js-open");
     numberButton.blur();
     document.removeEventListener("click", closeNumberPopap);
@@ -303,7 +329,7 @@ function closeSearch(evt) {
 
 
 categoryFirst.addEventListener("click", openPopapFirst);
-
+categorySecond.addEventListener("click", openPopapSecond);
 
 
 
