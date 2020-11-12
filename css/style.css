@@ -176,7 +176,6 @@ summary::marker {
   overflow-y: scroll;
   display: none;
   position: fixed;
-  width: 100%;
   left: 0;
   top: 104px;
   height: calc(100% - 104px);
@@ -1404,10 +1403,8 @@ summary::marker {
     min-width: 1340px;
     width: 100%;
     position: fixed;
-    z-index: 10;
   }
   .header__nav-wrapper {
-    width: 100%;
     background-color: transparent;
   }
   .header__nav-menu-open {
@@ -2087,7 +2084,7 @@ summary::marker {
     margin: 0 auto;
     padding: 0;
     position: static;
-    overflow-y: hidden;
+    overflow-y: visible;
     height: auto;
     width: 100%;
     max-width: 1563px;
@@ -2095,8 +2092,6 @@ summary::marker {
             box-sizing: border-box;
   }
   .header__category {
-    position: static;
-    overflow-y: hidden;
     height: auto;
     width: 100%;
     max-width: 1563px;
@@ -2120,9 +2115,6 @@ summary::marker {
     padding: 20px 10px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -2133,7 +2125,6 @@ summary::marker {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
-    z-index: 0;
   }
   .header__category-list li {
     width: auto;
