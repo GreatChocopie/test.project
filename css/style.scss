@@ -102,6 +102,7 @@ summary::marker {
     top: 0;
     left: 0;
     min-width: 732px;
+    width: 100%;
     z-index: 10;
 }
 
@@ -187,7 +188,7 @@ summary::marker {
 .modal-open-js_body {
     overflow-y: hidden;
     overflow-x: visible;
-  
+
 
 }
 
@@ -1071,6 +1072,7 @@ summary::marker {
     align-items: center;
     justify-content: center;
 }
+
 .footer {
     min-width: 732px;
 }
@@ -1231,6 +1233,7 @@ summary::marker {
 .popap__category-first {
     display: none;
 }
+
 .popap__category-second {
     display: none;
 }
@@ -1369,7 +1372,7 @@ summary::marker {
 
     .desctop-mail__tooltip-wrapper {
         display: none;
-        
+
     }
 
     .desctop-mail__tooltip {
@@ -1762,8 +1765,26 @@ summary::marker {
         font-size: 16px;
     }
 
+
     .header__search-input:focus {
         outline: none;
+    }
+
+    ::-webkit-input-placeholder {
+        color: transparent
+    }
+
+    ::-moz-placeholder {
+        color: transparent
+    }
+
+    
+    :-moz-placeholder {
+        color: transparent
+    }
+
+    :-ms-input-placeholder {
+        color: transparent
     }
 
     .header__search-submit {
@@ -1904,7 +1925,7 @@ summary::marker {
         box-sizing: border-box;
         background-color: transparent;
         display: block;
-    
+
     }
 
     .header__category-open-container {
@@ -2620,9 +2641,11 @@ summary::marker {
         box-sizing: border-box;
         border: none;
     }
+
     .footer__top-nav-item:last-child {
         display: none;
     }
+
     .footer__top-nav-item summary {
         position: relative;
         width: 100%;
@@ -2712,9 +2735,9 @@ summary::marker {
 
 
     // попап
-    
+
     .popap {
-        
+
         position: fixed;
         overflow-y: scroll;
         box-sizing: border-box;
@@ -2997,8 +3020,8 @@ summary::marker {
     .popap__category-second {
         display: none;
     }
-    
-    
+
+
     .category-second__container {
         height: 613px;
         padding: 0;
@@ -3007,7 +3030,7 @@ summary::marker {
         border: none;
         width: fit-content;
     }
-    
+
     .category-second__button-wrapper {
         width: 399px;
         box-sizing: border-box;
@@ -3016,7 +3039,7 @@ summary::marker {
         flex-direction: column;
         background-color: $color-white1;
     }
-    
+
     .category-second__button {
         position: relative;
         padding: 10px 0 10px 89px;
@@ -3029,16 +3052,16 @@ summary::marker {
         border-bottom: 1px solid $color-gray11;
         cursor: pointer;
     }
-    
+
     .category-second__button:hover,
     .category-second__button:focus {
         color: $color-yellow2;
     }
-    
+
     .category-second__button:last-child {
         border: none;
     }
-    
+
     .category-second__button::after {
         position: absolute;
         content: ">";
@@ -3048,40 +3071,40 @@ summary::marker {
         color: rgba(48, 48, 48, 0.4);
         font-family: MyriadPro-SemiExt;
     }
-    
+
     .category-second__button:hover::after,
     .category-second__button:focus::after {
         color: rgba(0, 173, 0, 0.4);
     }
-    
-    
-    
+
+
+
     .category-second__radio1:checked~.category-second__button-wrapper .category-second__button_1 {
         color: $color-yellow2;
     }
-    
+
     .category-second__radio1:checked~.category-second__button-wrapper .category-second__button_1::after {
         color: rgba(0, 173, 0, 0.4);
     }
-    
+
     #category-second-radio1:checked~.category-second__content-wrapper .category-second__content-one {
         display: block;
-    
+
     }
-    
+
     .category-second__content-one {
         height: 100%;
         min-width: 562px;
     }
-    
+
     .category-second__content-one .content-one__container {
         height: 100%;
         min-width: 562px;
         display: flex;
         justify-content: space-between;
     }
-    
-   
+
+
     .category-second__content-one .content-one__list-wrapper {
         display: flex;
         flex-direction: column;
@@ -3093,30 +3116,30 @@ summary::marker {
         box-sizing: border-box;
         background-color: $color-gray5;
     }
-    
+
     .content-one__list {
         padding: 20px 30px;
         margin: 0;
         border-bottom: 1px solid $color-gray11;
         box-sizing: border-box;
     }
-    
+
     .content-one__list li {
         padding: 5px 0;
     }
-    
+
     .content-one__list-link {
         font-family: MyriadPro-LightSemiExt;
         font-size: 18px;
         line-height: normal;
         color: $color-black1;
     }
-    
+
     .content-one__list-link:hover,
     .content-one__list-link:focus {
         opacity: 0.8;
     }
-    
+
     .category-second__content-one .content-one__brand-container {
         padding: 20px 30px;
         margin: 0;
@@ -3125,7 +3148,7 @@ summary::marker {
         box-sizing: border-box;
 
     }
-    
+
     .content-one__title {
         padding: 0;
         margin: 0;
@@ -3135,16 +3158,16 @@ summary::marker {
         font-weight: normal;
         color: $color-gray2;
     }
-    
+
     .content-one__brand-list {
         padding: 0;
         margin: 0;
     }
-    
+
     .content-one__brand-list li {
         padding: 5px 0;
     }
-    
+
     .content-one__brand-link {
         font-family: MyriadPro-LightSemiExt;
         font-size: 24px;
@@ -3152,6 +3175,7 @@ summary::marker {
         font-weight: normal;
         color: $color-gray3;
     }
+
     .category-second__content-one .content-one__brand-list li:nth-child(1),
     .category-second__content-one .content-one__brand-list li:nth-child(3),
     .category-second__content-one .content-one__brand-list li:nth-child(5),
@@ -3160,71 +3184,72 @@ summary::marker {
     .category-second__content-one .content-one__brand-list li:nth-child(12) {
         text-transform: uppercase;
     }
-    
+
     .content-one__brand-link:hover,
     .content-one__brand-link:focus {
         color: $color-yellow2;
     }
-    
+
     .content-one__list-link_current {
         color: $color-yellow2;
     }
-    
-    
+
+
     .content-one__cuantry-container {
         padding: 20px 30px;
         margin: 0;
         box-sizing: border-box;
     }
-    
+
     .content-one__cuantry-list {
         padding: 0;
         margin: 0;
     }
-    
+
     .content-one__cuantry-list li {
         padding: 5px 0 0 30px;
-    
+
     }
-    
+
     .content-one__cuantry-spain {
         background-image: url(../img/Spain.png);
         background-repeat: no-repeat;
         background-position: left 0 top 5px;
         background-size: 20px 20px;
     }
-    
+
     .content-one__cuantry-sw {
         background-image: url(../img/Switzerland.png);
         background-repeat: no-repeat;
         background-position: left 0 top 5px;
         background-size: 20px 20px;
     }
-    
+
     .content-one__cuantry-germany {
         background-image: url(../img/Germany.png);
         background-repeat: no-repeat;
         background-position: left 0 top 5px;
         background-size: 20px 20px;
     }
-    
+
     .content-one__cuantry-turkey {
         background-image: url(../img/Turkey.png);
         background-repeat: no-repeat;
         background-position: left 0 top 5px;
         background-size: 20px 20px;
     }
-    
+
     .content-one__cuantry-link {
         font-family: MyriadPro-LightSemiExt;
         font-size: 18px;
         line-height: normal;
         color: $color-gray3;
     }
+
     .content-one__cuantry-link:hover {
         opacity: 0.8;
     }
-    
+
     .category-second__content-one .content-one__pic-wrapper {
         width: 441px;
         padding: 35px 67px;
@@ -3235,12 +3260,12 @@ summary::marker {
         align-items: center;
         background-color: $color-yellow2;
     }
-    
+
     .category-second__content-one .content-one__pic-img {
         width: 201px;
         height: 412px;
     }
-    
+
     .content-one__pic-title {
         margin: auto 0 20px 0;
         font-family: MyriadPro-SemiExt;
@@ -3250,7 +3275,7 @@ summary::marker {
         text-align: center;
         color: $color-white1;
     }
-    
+
     .content-one__pic-button {
         padding: 10px 25px;
         border-radius: 5px;
@@ -3260,14 +3285,14 @@ summary::marker {
         line-height: normal;
         color: $color-white1;
     }
-    
+
     .content-one__pic-button:hover,
     .content-one__pic-button:focus {
         opacity: 0.8;
     }
-    
-    
+
+
     .popap-open-js {
         display: block;
-    }    
+    }
 }

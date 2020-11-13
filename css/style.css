@@ -68,6 +68,7 @@ summary::marker {
   top: 0;
   left: 0;
   min-width: 732px;
+  width: 100%;
   z-index: 10;
 }
 
@@ -1962,6 +1963,18 @@ summary::marker {
   }
   .header__search-input:focus {
     outline: none;
+  }
+  ::-webkit-input-placeholder {
+    color: transparent;
+  }
+  ::-moz-placeholder {
+    color: transparent;
+  }
+  :-moz-placeholder {
+    color: transparent;
+  }
+  :-ms-input-placeholder {
+    color: transparent;
   }
   .header__search-submit {
     padding: 0;
