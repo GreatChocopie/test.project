@@ -154,7 +154,7 @@ summary::marker {
   background-color: #ffffff;
 }
 
-.header__nav-menu-open_close {
+.header__nav-menu-open_close .header__button-wrapper {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
