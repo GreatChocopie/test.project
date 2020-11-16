@@ -70,7 +70,6 @@ summary::marker {
   min-width: 732px;
   width: 100%;
   z-index: 10;
-  overflow-x: scroll;
 }
 
 .header__nav-wrapper {
@@ -178,7 +177,7 @@ summary::marker {
 
 .modal-open-js_body {
   overflow-y: hidden;
-  overflow-x: scroll;
+  overflow-x: visible;
 }
 
 .header__nav {

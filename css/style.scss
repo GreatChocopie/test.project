@@ -104,7 +104,6 @@ summary::marker {
     min-width: 732px;
     width: 100%;
     z-index: 10;
-    overflow-x: scroll;
 
 }
 
@@ -208,7 +207,7 @@ summary::marker {
 
 .modal-open-js_body {
     overflow-y: hidden;
-    overflow-x: scroll;
+    overflow-x: visible;
 
 
 }
